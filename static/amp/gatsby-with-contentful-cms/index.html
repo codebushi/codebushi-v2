@@ -1,0 +1,382 @@
+
+
+<!DOCTYPE html>
+
+
+
+<html amp lang="en-us" class="no-js">
+<head>
+    <title>Gatsby.js with Contentful Content Management</title>
+    <meta charset="utf-8">
+
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    
+        
+
+<link rel="amp-manifest" href="/amp-manifest.json">
+
+    
+
+
+
+
+    <link rel="canonical" href="https://codebushi.com/gatsby-with-contentful-cms/">
+    <link rel="icon" type="image/x-icon" href="https://codebushi.com/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Blog site using Gatsby.js as the front-end and Contentful as the content management system. A super fast and modern React website example.">
+
+    
+
+    <meta name="theme-color" content="#f72060" />
+
+    
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Code Bushi",
+    "alternateName": "Code Bushi",
+    "url": "https://codebushi.com/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "codebushi.com",
+  "url": "https://codebushi.com/"
+  
+  , "logo": "https://codebushi.com/codebushilogo.png"
+  
+  
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://codebushi.com/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "https://codebushi.com/gatsby-with-contentful-cms/",
+          "name": "gatsby-with-contentful-cms"
+        }
+    }]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Hunter Chang"
+  },
+  "headline": "Gatsby.js with Contentful Content Management",
+  "description": "Blog site using Gatsby.js as the front-end and Contentful as the content management system. A super fast and modern React website example.",
+  "wordCount": 1182,
+  "datePublished" : "2018-01-20",
+  "dateModified" : "2018-01-20",
+  "image" : {
+      "@context": "http://schema.org",
+      "@type": "ImageObject",
+      "url": "https://codebushi.com/amp/img/gatsby-contentful.jpg",
+      "height" : 503,
+      "width" : 920
+    },
+  "mainEntityOfPage" : "https://codebushi.com/gatsby-with-contentful-cms/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "codebushi.com",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://codebushi.com/codebushilogoamp.png",
+        "height" : 60,
+        "width" : 320
+    }
+  }
+}
+</script>
+
+
+
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+        html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{margin:.67em 0}mark{background:#ff0;color:#000}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}td,th{padding:0}*{box-sizing:border-box}button,input,select,textarea{font:13px/1.4 Helvetica,arial,freesans,clean,sans-serif}a{color:#4183c4}a:active,a:focus,a:hover{text-decoration:underline}.rule,hr{height:0;margin:15px 0;overflow:hidden;background:transparent;border:0;border-bottom:1px solid #ddd}.rule:after,.rule:before,hr:after,hr:before{display:table;content:""}.rule:after,hr:after{clear:both}fieldset{padding:0;margin:0;border:0}label{font-size:13px;font-weight:700}#adv_code_search .search-page-label,input[type=email],input[type=number],input[type=password],input[type=tel],input[type=text],input[type=url],textarea{min-height:34px;padding:7px 8px;font-size:13px;color:#333;vertical-align:middle;background-color:#fff;background-repeat:no-repeat;background-position:100%;border:1px solid #ccc;border-radius:3px;outline:none;box-shadow:inset 0 1px 2px rgba(0,0,0,.075)}#adv_code_search .focus.search-page-label,#adv_code_search .search-page-label:focus,.focused .drag-and-drop,input[type=email].focus,input[type=email]:focus,input[type=number].focus,input[type=number]:focus,input[type=password].focus,input[type=password]:focus,input[type=tel].focus,input[type=tel]:focus,input[type=text].focus,input[type=text]:focus,input[type=url].focus,input[type=url]:focus,textarea.focus,textarea:focus{border-color:#51a7e8;box-shadow:inset 0 1px 2px rgba(0,0,0,.075),0 0 5px rgba(81,167,232,.5)}.input-contrast,input.input-contrast{background-color:#fafafa}.input-contrast:focus,input.input-contrast:focus{background-color:#fff}:-moz-placeholder,::-webkit-input-placeholder{color:#aaa}::-webkit-validation-bubble-message{font-size:12px;color:#fff;background:#9c2400;border:0;border-radius:3px;-webkit-box-shadow:1px 1px 1px rgba(0,0,0,.1)}input::-webkit-validation-bubble-icon{display:none}::-webkit-validation-bubble-arrow{background-color:#9c2400;border:1px solid #9c2400;-webkit-box-shadow:1px 1px 1px rgba(0,0,0,.1)}.absent{color:#c00}.anchor{position:absolute;top:0;bottom:0;left:0;display:block;padding-right:6px;padding-left:30px;margin-left:-30px}.anchor:focus{outline:none}h1,h2,h3,h4,h5,h6{position:relative;margin-top:1em;margin-bottom:16px;font-weight:700;line-height:1.4}h1 .octicon-link,h2 .octicon-link,h3 .octicon-link,h4 .octicon-link,h5 .octicon-link,h6 .octicon-link{display:none;color:#000;vertical-align:middle}h1:hover .anchor,h2:hover .anchor,h3:hover .anchor,h4:hover .anchor,h5:hover .anchor,h6:hover .anchor{height:1em;padding-left:8px;margin-left:-30px;line-height:1;text-decoration:none}h1:hover .anchor .octicon-link,h2:hover .anchor .octicon-link,h3:hover .anchor .octicon-link,h4:hover .anchor .octicon-link,h5:hover .anchor .octicon-link,h6:hover .anchor .octicon-link{display:inline-block}h1 code,h1 tt,h2 code,h2 tt,h3 code,h3 tt,h4 code,h4 tt,h5 code,h5 tt,h6 code,h6 tt{font-size:inherit}h1{font-size:2.25em;line-height:1.2}h1,h2{padding-bottom:.3em;border-bottom:1px solid #eee}h2{font-size:1.75em;line-height:1.225}h3{font-size:1.5em;line-height:1.43}h4{font-size:1.25em}h5,h6{font-size:1em}h6{color:#777}blockquote,dl,ol,p,pre,table,ul{margin-top:0;margin-bottom:16px}hr{height:4px;margin:16px 0;background-color:#e7e7e7;border:0 none}ol,ul{padding-left:2em}ol.no-list,ul.no-list{padding:0;list-style-type:none}ol ol,ol ul,ul ol,ul ul{margin-top:0;margin-bottom:0}li>p{margin-top:16px}dl,dl dt{padding:0}dl dt{margin-top:16px;font-size:1em;font-style:italic;font-weight:700}dl dd{padding:0 16px;margin-bottom:16px}blockquote{padding:0 15px;color:#777;border-left:4px solid #ddd}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}table th{font-weight:700}table td,table th{padding:6px 13px;border:1px solid #ddd}table tr{background-color:#fff;border-top:1px solid #ccc}table tr:nth-child(2n){background-color:#f8f8f8}img{max-width:100%;box-sizing:border-box}span.frame,span.frame>span{display:block;overflow:hidden}span.frame>span{float:left;width:auto;padding:7px;margin:13px 0 0;border:1px solid #ddd}span.frame span img{display:block;float:left}span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}span.align-center{display:block;overflow:hidden;clear:both}span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}span.align-center span img{margin:0 auto;text-align:center}span.align-right{display:block;overflow:hidden;clear:both}span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}span.align-right span img{margin:0;text-align:right}span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}span.float-left span{margin:13px 0 0}span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}code,tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}code:after,code:before,tt:after,tt:before{letter-spacing:-.2em;content:"\00a0"}code br,tt br{display:none}del code{text-decoration:inherit;vertical-align:text-top}pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.highlight{margin-bottom:16px}.highlight pre,pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.highlight pre{margin-bottom:0;word-break:normal}pre,pre code,pre tt{word-wrap:normal}pre code,pre tt{display:inline;max-width:none;padding:0;margin:0;overflow:initial;line-height:inherit;background-color:transparent;border:0}pre code:after,pre code:before,pre tt:after,pre tt:before{content:normal}abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{text-decoration:none}ins,mark{background-color:#ff9;color:#000}mark{font-style:italic;font-weight:700}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border-top:1px solid #ccc;margin:1em 0}input,select{vertical-align:middle}body{background-color:#0f1621;color:#fff;font-size:14px;font-family:Helvetica Neue,Helvetica,Segoe UI,Arial,freesans,sans-serif}main{max-width:1180px;padding:30px;margin:0 auto}h1{font-weight:300;line-height:1.4em;margin:.5em 0;font-family:Georgia,serif;transition:color .4s}h1,h2{font-size:2em}h2,h3{font-weight:300;margin:30px 0}h3{font-size:1.8em}h4{font-size:1.6em}h4,h5{font-weight:300}h5{font-size:1.2em}h6{font-weight:300;font-size:1em}p{line-height:1.4em;font-size:1.2em;margin:15px 0}blockquote{border-left:5px solid #ff1d55;background-color:#ffe9ee;padding:1em;margin-bottom:1em}small{font-size:80%}.lightbox{background-color:rgba(3,121,196,.4);min-height:100vh;min-width:100vw;padding:30px}code{font:14px Consolas,Liberation Mono,Menlo,Courier,monospace}p>code{color:#ff1d55}pre code{display:block;background-color:#f7f7f7;padding:15px;overflow:auto;color:#123;line-height:1.4em}a{color:#f72060;text-decoration:none;transition:color .4s,background .4s}a:hover{color:#e9003a}ol,ul{margin:7.5px;padding:7.5px 15px}ol li,ul li{margin:7.5px 15px}.doc-parameters{list-style-type:none;padding:0}.doc-parameters li{display:block;margin:0;margin-bottom:15px}.doc-parameters .example,.doc-parameters blockquote{border-left:5px solid #0379c4;background-color:#96d5fd;color:#123;line-height:1em;font-size:1em;padding:1em;margin:0}.doc-parameters .example{background-color:#c8e9fe}.doc-parameters .parameter{display:block;padding:1em;background-color:#0379c4;color:#fff;margin:0}.doc-parameters .parameter strong{display:inline-block;padding:0 .5em;border-radius:.25em;line-height:2em;background-color:#025a92}hr{height:.25em;padding:0;margin:24px 0;background-color:#f7f7f7;border:0}.teaser{display:-ms-flexbox;display:flex;text-align:left;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:justify;justify-content:space-between}.teaser aside{-ms-flex-preferred-size:60%;flex-basis:60%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;padding:30px}@media (max-width:700px){.teaser aside{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser .content{-ms-flex-preferred-size:40%;flex-basis:40%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;color:dimgray;font-size:12px}@media (max-width:700px){.teaser .content{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser .content.content-full{-ms-flex-preferred-size:100%;flex-basis:100%}.teaser .content h3{font-size:14px;text-transform:uppercase;font-weight:600;color:#123}.main-index{text-align:center}.main-index amp-img{margin:15px auto;width:50%}@media (min-width:900px){h1{font-size:3em}.main-index p{font-size:2em}}.breadcrumbs{padding:1em;background-color:#f7f7f7}.breadcrumbs ul{display:block;margin:0;padding:0}.breadcrumbs ul li{display:inline-block;margin:0 .5em}.breadcrumbs ul li:before{content:" / ";position:relative;margin-left:-.5em;color:dimgray}.breadcrumbs ul li a{color:dimgray}.breadcrumbs ul li:last-child a{color:#ff1d55}header{background-color:#ff1d55;color:#fff;padding:30px;position:relative}header .brand{display:inline-block;position:absolute;left:30px;top:20px;line-height:15px;text-transform:uppercase;padding:7.5px;font-size:1.4em}header .brand:hover{background-color:#ff1d55;color:#fff}header a{color:#fff;text-decoration:none;border-radius:7.5px;padding:7.5px}header a:hover{text-decoration:none;background-color:#fff;color:#ff1d55}header nav ul{padding:0;margin:0;display:block;text-align:right}header nav ul li{padding:0;margin:0 7.5px;display:inline-block}header nav ul li.hamburger{display:none}header nav ul li.hamburger button{position:absolute;right:30px;top:20px;border:0;background-color:#fff;color:#ff1d55;font-weight:700;border-radius:50%;width:30px;height:30px;overflow:hidden;text-align:center;padding:0;margin:0}@media (max-width:900px){header nav ul li{display:none}header nav ul li.hamburger{display:inline-block}}.sidebarNavigation{width:210px;max-width:95%}.sidebarNavigation ul{padding:0;margin:0}.sidebarNavigation ul li{display:block}.sidebarNavigation ul li a{display:block;line-height:1.4em;padding:7.5px}footer{margin:60px auto;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:justify;justify-content:space-between;max-width:1180px;padding:30px;font-size:12px}footer a:hover{text-decoration:none}footer strong{text-transform:uppercase;margin-bottom:15px;display:block}footer strong a{color:#1d1d1d}footer ul{display:block;padding:0;margin:0}footer ul li{display:block;line-height:1.4em;padding:7.5px 0;margin:0}footer ul li a{color:dimgray}footer .quarter-section{margin-bottom:30px;-ms-flex-preferred-size:25%;flex-basis:25%}@media (max-width:900px){footer .quarter-section{-ms-flex-preferred-size:33%;flex-basis:33%}}@media (max-width:700px){footer .quarter-section{-ms-flex-preferred-size:50%;flex-basis:50%}}@media (max-width:500px){footer .quarter-section{-ms-flex-preferred-size:100%;flex-basis:100%}}.boxes{display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:justify;justify-content:space-between;font-size:12px}.boxes .box{-ms-flex-preferred-size:30%;flex-basis:30%;background-color:#f7f7f7;padding:30px;margin:7.5px 0;text-align:left;font-size:12px}.boxes .box h3{font-size:12px;line-height:1em;padding:0;margin:0}.boxes .box a{padding:0;color:#ff1d55}.boxes .box p{color:dimgray;font-size:12px;margin:7.5px 0}@media (max-width:900px){.boxes .box{-ms-flex-preferred-size:45%;flex-basis:45%}}@media (max-width:500px){.boxes .box{-ms-flex-preferred-size:100%;flex-basis:100%}}.mt-5,.my-5{margin-top:3rem}.mt-4,.my-4{margin-top:1.5rem}.mb-5,.my-5{margin-bottom:3rem}.mb-4,.my-4{margin-bottom:1.5rem}
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+<main>
+    <h1>Gatsby.js with Contentful Content Management</h1>
+    <div>
+        <p><small>January 20, 2018</small></p>
+    </div>
+    <div>
+        <p><amp-img src="https://codebushi.com/amp/img/gatsby-contentful.jpg" alt="" layout="responsive" width="920" height="503"></amp-img></p>
+    </div>
+    <div>
+        <p>One of the most magical aspects of Gatsby.js is its ability to pull in data from a wide variety of sources. Leveraging the power of GraphQL, you can populate a Gatsby website with local markdown files, a CSV file, a MongoDB database, or from a list of popular content management systems (CMS). This means that if you have a Wordpress site, you can use Gatsby to pull in your posts and pages, and create a modern static website with a React front-end.</p>
+
+<p>Gatsby also supports Contentful, which is a cloud hosted, headless CMS. The &ldquo;headless&rdquo; part means that there is no front-end layer, only a back-end which you can log into (think /wp-admin but a lot simpler). This is a perfect fit for us because we can use Gatsby as the front-end layer and Contentful as the back-end to manage pages and blog posts.</p>
+
+<h4 class="mt-4 mb-4"><a href="https://determined-cray-70c763.netlify.com/">Contentful and Gatsby.js Blog Demo</a> <small>( <a href="https://github.com/ChangoMan/gatsby-contentful-demo">view source</a> )</small></h4>
+
+<p>Start by installing the <a href="https://github.com/gatsbyjs/gatsby-starter-default">gatsby-starter-default</a> official starter.</p>
+
+<pre><code class="language-bash">gatsby new gatsby-contentful https://github.com/gatsbyjs/gatsby-starter-default
+cd gatsby-contentful
+</code></pre>
+
+<p>Now this starter is pretty bare bones, we&rsquo;re going to need a few additional plugins to make our site work.</p>
+
+<pre><code class="language-bash">yarn add gatsby-source-contentful gatsby-transformer-remark gatsby-image
+</code></pre>
+
+<p>The plugin <code>gatsby-source-contentful</code> is what allows us to connect with Contentful&rsquo;s API and get our data. The other two plugins will help us format that data into something useful for our site.</p>
+
+<p>Let&rsquo;s add some configuration to our <code>gatsby-config.js</code>, which is located in the root folder.</p>
+
+<pre><code class="language-javascript">module.exports = {
+    siteMetadata: {
+        title: 'Gatsby Default Starter',
+    },
+    plugins: [
+        {
+            resolve: `gatsby-source-contentful`,
+            options: {
+                spaceId: `###`,
+                accessToken: `###`,
+            },
+        },
+        'gatsby-plugin-react-helmet',
+        'gatsby-transformer-remark'
+    ],
+};
+</code></pre>
+
+<p>Here we are activating the Contentful plugin, but we need to create a new account with Contentful in order to get the <code>spaceId</code> and <code>accessToken</code>. Good thing they offer a very reasonable free tier, let&rsquo;s sign up! Head on over to <a href="https://www.contentful.com/">Contentful.com</a>.</p>
+
+<h3 class="mt-5 mb-3">Setting up Contentful</h3>
+
+<p>If you are new to Contentful, they have a <a href="https://www.contentful.com/r/knowledgebase/contentful-101/">beginner&rsquo;s guide</a> to run you through the basics. For me personally, I come from a Wordpress background and Contentful reminded me a lot of <a href="https://www.advancedcustomfields.com/">Advanced Custom Fields</a>. You can create a content model and populate it with whatever fields you like. Once you sign up, there should be a Sample Project created for you to experiment with. Let&rsquo;s add a new content model so we&rsquo;re all on the same page.</p>
+
+<p><amp-img src="../img/contentful-blog-model.jpg" alt="Contentful Blog Model" layout="responsive" width="800" height="378"></amp-img></p>
+
+<p>For this demo, the &ldquo;Blog&rdquo; model I created has 4 fields. Title, slug, featured image, and content. The content field is long text and I used the default markdown appearance. The model name, &ldquo;Blog&rdquo;, is also important because it will be used later in our GraphQL query.</p>
+
+<p>While still in Contentful, head to the APIs page and create a new API key. Here is where we can grab our <code>spaceId</code> and <code>accessToken</code> for our <code>gatsby-config.js</code>. We can now also create some sample blog posts, go to the Content page and add them under the newly created Blog content type.</p>
+
+<h3 class="mt-5 mb-3">Querying for Contentful with GraphQL</h3>
+
+<p>After you add in your <code>spaceId</code> and <code>accessToken</code>, we can start up our Gatsby development process by going into the terminal and running <code>gatsby develop</code>. Go to <code>http://localhost:8000/</code> to see your site. If we now head to <code>http://localhost:8000/___graphql</code> we can see what&rsquo;s known as GraphiQL, which is a graphical interface for experimenting with GraphQL queries.</p>
+
+<p>Let&rsquo;s try and get our new blog post data from GraphiQL. On the left panel enter the following query and hit the play button.</p>
+
+<pre><code class="language-javascript">{
+  allContentfulBlog {
+    edges {
+      node {
+        id
+        title
+        slug
+      }
+    }
+  }
+}
+</code></pre>
+
+<p>In the right panel, you should see the blog posts that you made in Contentful! GraphiQL also has some cool auto complete features, which will show you all the options available for a particular set of data. If you add a new line right above <code>allContentfulBlog</code> and hit <code>control + spacebar</code>, you should get a dropdown with all the other fields you can query.</p>
+
+<p><amp-img src="../img/graphiql-dropdown.jpg" alt="GraphQL Dropdown" layout="responsive" width="800" height="381"></amp-img></p>
+
+<p>Notice that the <code>allContentful</code> fields all have the content model&rsquo;s name after it, such as <code>allContentfulBrand</code> or <code>allContentfulProduct</code>. This is where the Contentful model name comes into play. Since we want our blog posts, the one we want to use is <code>allContentfulBlog</code> to match our &ldquo;Blog&rdquo; content model.</p>
+
+<p>Open up <code>src/pages/index.js</code> in a text editor, this is our homepage component. Replace the code with the <a href="https://github.com/ChangoMan/gatsby-contentful-demo/blob/master/src/pages/index.js">demo site&rsquo;s index.js code</a>. Notice the GraphQL query at the bottom of the page, which looks very similar to our experiments in GraphiQL.</p>
+
+<pre><code class="language-javascript">export const pageQuery = graphql`
+    query pageQuery {
+        allContentfulBlog(
+            filter: {
+                node_locale: {eq: &quot;en-US&quot;}
+            },
+            sort: {
+                fields: [createdAt], order: DESC
+            }
+        ) {
+            edges {
+                node {
+                    id
+                    title
+                    slug
+                    createdAt(formatString: &quot;MMMM DD, YYYY&quot;)
+                    featuredImage {
+                        resolutions(width: 300) {
+                            ...GatsbyContentfulResolutions
+                        }
+                    }
+                    content {
+                        childMarkdownRemark {
+                            excerpt
+                        }
+                    }
+                }
+            }
+        }
+    }
+`
+</code></pre>
+
+<p>There&rsquo;s some extra filters and sorting applied to the data, and we are getting fields such as the title, slug, featured image, and content. If you look at the <code>featuredImage</code>, we are getting the resolutions to be used with <code>gatsby-image</code>. For the <code>content</code>, the query comes in as markdown and we need to use <code>gatsby-transformer-remark</code> to convert it. After saving this page, you should see a list of Contentful blog posts on the homepage!</p>
+
+<p>The last step is to have Gatsby generate the actual pages for each post. In the root folder, open up the <code>gatsby-node.js</code> file and replace with the following:</p>
+
+<pre><code class="language-javascript">const path = require('path')
+
+exports.createPages = ({graphql, boundActionCreators}) =&gt; {
+    const {createPage} = boundActionCreators
+    return new Promise((resolve, reject) =&gt; {
+        const blogPostTemplate = path.resolve('src/templates/blog-post.js')
+        resolve(
+            graphql(`
+                {
+                    allContentfulBlog (limit:100) {
+                        edges {
+                            node {
+                                id
+                                slug
+                            }
+                        }
+                    }
+                }
+            `).then((result) =&gt; {
+                if (result.errors) {
+                    reject(result.errors)
+                }
+                result.data.allContentfulBlog.edges.forEach((edge) =&gt; {
+                    createPage ({
+                        path: edge.node.slug,
+                        component: blogPostTemplate,
+                        context: {
+                            slug: edge.node.slug
+                        }
+                    })
+                })
+                return
+            })
+        )
+    })
+}
+</code></pre>
+
+<p>This uses the Gatsby API to automatically create pages that are queried with GraphQL. We use a <code>blogPostTemplate</code> in this file that doesn&rsquo;t exist yet, so create a new folder and file at <code>src/templates/blog-post.js</code> with the following code:</p>
+
+<pre><code class="language-jsx">import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import Img from &quot;gatsby-image&quot;
+
+class BlogPost extends Component {
+    render() {
+        console.log(this.props)
+        const { title, createdAt, featuredImage, content } = this.props.data.contentfulBlog
+        return (
+            &lt;div&gt;
+                &lt;h1 style={{
+                    borderBottom: '1px solid #ccc',
+                    paddingBottom: '0.5rem'
+                }}&gt;
+                    {title}
+                &lt;/h1&gt;
+                &lt;p&gt;{createdAt}&lt;/p&gt;
+                &lt;div&gt;
+                    &lt;Img sizes={featuredImage.sizes}/&gt;
+                &lt;/div&gt;
+                &lt;hr /&gt;
+                &lt;div dangerouslySetInnerHTML={{__html:content.childMarkdownRemark.html}} /&gt;
+            &lt;/div&gt;
+        )
+    }
+}
+
+BlogPost.PropTypes = {
+    data: PropTypes.object.isRequired
+}
+
+export default BlogPost
+
+export const pageQuery = graphql`
+    query blogPostQuery($slug: String!){
+        contentfulBlog(slug: {eq: $slug}) {
+            title
+            createdAt(formatString: &quot;MMMM DD, YYYY&quot;)
+            featuredImage {
+                sizes(maxWidth: 800) {
+                    ...GatsbyContentfulSizes
+                }
+            }
+            content {
+                childMarkdownRemark {
+                    html
+                }
+            }
+        }
+    }
+`
+</code></pre>
+
+<p>The query used on this page is similar to the one from the homepage, we just display the data in a different way. You&rsquo;ll probably need to stop and restart the <code>gatsby develop</code> command in the terminal, this will rebuild the site with the new blog pages. Feel free to add more blog posts in Contentful, but right now you&rsquo;ll need to rebuild the site each time a new post is created to pull in that data.</p>
+
+    </div>
+</main>
+
+
+
+<amp-analytics type="googleanalytics">
+    <script type="application/json">
+        {
+            "vars": {
+                "account": "UA-115990515-1"
+            },
+            "triggers": {"trackEvent":{"on":"click","request":"event","selector":"body","vars":{"eventAction":"click","eventCategory":"body-click"}},"trackPageview":{"on":"visible","request":"pageview"}}
+        }
+    </script>
+</amp-analytics>
+
+</body>
+</html>

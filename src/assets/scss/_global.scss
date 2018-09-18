@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Scope+One|Lato:300,300i,400,400i,700');
+
+body {
+    // background-color: #16171f;
+    background-color: #0f1621;
+    color: #f4f4f4;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Scope One', serif;
+}
+
+hr {
+    border-color: #555;
+}
+
+.gatsby-highlight {
+    font-size: 0.85rem;
+}
+
+@include media-breakpoint-up(lg) {
+    html {
+        font-size: 18px;
+    }
+    body {
+        line-height: 1.7;
+    }
+    .lead {
+        font-size: 1.2rem;
+    }
+}

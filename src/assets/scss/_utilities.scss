@@ -1,0 +1,44 @@
+.u-bg-cover {
+    background-position: top center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.u-font-primary {
+    font-family: 'Lato', sans-serif;
+}
+
+.u-font-secondary {
+    font-family: 'Scope One', serif;
+}
+
+.u-font-special {
+    font-family: 'Kaushan Script', cursive;
+}
+
+.u-no-outline:focus {
+    outline: none;
+}
+
+.u-hover-fade:hover {
+    opacity: 0.75;
+    .gatsby-image-wrapper {
+        opacity: 0.75;
+    }
+}
+
+.u-link-white {
+    color: #fff;
+    &:hover {
+        color: $primary;
+    }
+}
+
+.u-list-spaced {
+    > li {
+        margin-bottom: .9rem;
+    }
+}

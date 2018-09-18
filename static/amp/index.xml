@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code Bushi</title>
+    <link>https://codebushi.com/</link>
+    <description>Recent content on Code Bushi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://codebushi.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vue.js and Chart.js Weather API Example</title>
+      <link>https://codebushi.com/vuejs-with-chartjs-api-example/</link>
+      <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://codebushi.com/vuejs-with-chartjs-api-example/</guid>
+      <description>Recently I was asked to add some fancy charts and graphs to an existing Wordpress website. In the past, my weapon of choice would be either jQuery or Angular.js for a task such as this, but I decided to try the popular Vue.js. Vue.js is a progressive javascript framework, which means it&amp;rsquo;s extremely easy to add it to an existing website and get started. For this tutorial, I&amp;rsquo;m going to start with a simple HTML boilerplate file and add Vue.</description>
+    </item>
+    
+    <item>
+      <title>Progressive Web Apps with React &amp; Preact.js</title>
+      <link>https://codebushi.com/pwa-with-react-and-preact/</link>
+      <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://codebushi.com/pwa-with-react-and-preact/</guid>
+      <description>Progressive Web Apps (PWA) have come onto the scene in a big way and with more mobile browsers supporting them, they might very well be the future of web applications. A PWA is actually pretty simple, and virtually any website or application can be converted into a baseline Progressive Web App. Here is a checklist from Google on all the things a website needs in order to be considered a PWA.</description>
+    </item>
+    
+    <item>
+      <title>Siteground vs. Hostgator for Wordpress Hosting</title>
+      <link>https://codebushi.com/siteground-hostgator-wordpress-hosting/</link>
+      <pubDate>Sun, 22 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://codebushi.com/siteground-hostgator-wordpress-hosting/</guid>
+      <description>For as long as I can remember, I&amp;rsquo;ve been hosting my Wordpress sites with Hostgator.com without any major issues. They were the most popular option for Wordpress hosting at the time and their prices were very reasonable. Recently a friend of mine wanted to start a new Wordpress site so I looked into some new hosting options with him. I came across Siteground.com a lot during my research and everyone kept raving about their speed and reliability.</description>
+    </item>
+    
+    <item>
+      <title>GraphQL API with React.js</title>
+      <link>https://codebushi.com/graphql-api-with-react/</link>
+      <pubDate>Tue, 17 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://codebushi.com/graphql-api-with-react/</guid>
+      <description>Many new APIs are moving away from REST and embracing the change to GraphQL. GitHub&amp;rsquo;s API V4 is one example of this, and that&amp;rsquo;s because GraphQL offers a lot more flexibility when querying for data. This tutorial will go over how to incorporate and make queries using React and a modern GraphQL API.
+For this demo, we&amp;rsquo;ll be using AniLists&amp;rsquo;s V2 API to get a list of anime titles and their cover images.</description>
+    </item>
+    
+    <item>
+      <title>Resources for Learning Javascript and React</title>
+      <link>https://codebushi.com/learning-javascript-and-react/</link>
+      <pubDate>Wed, 04 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://codebushi.com/learning-javascript-and-react/</guid>
+      <description>Here are some of my favorite courses and videos for learning general Javascript and React.js. I recommend starting with a solid understanding of vanilla Javascript, learning some new ES6 features and techniques, and then finally moving onto React.js.
+Note: Many of the courses mentioned are from Udemy.com and are frequently on sale. It seems like every 2 weeks or so, all Udemy courses are discounted to about $10 - $20, so I would recommend waiting a few days if you&amp;rsquo;re not seeing a sale of some sort.</description>
+    </item>
+    
+    <item>
+      <title>Best Sites for Free Stock Photos</title>
+      <link>https://codebushi.com/free-stock-photos/</link>
+      <pubDate>Thu, 29 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://codebushi.com/free-stock-photos/</guid>
+      <description>Quality photos and images can instantly make a website look better and feel more professional. Using random images from the internet can be a bad idea and lead to copyright issues. There are a bunch of great resources these days for free stock photography, all of which can be used with zero copyright restrictions. Here are some of my favorites:
+Unsplash.com Website: https://unsplash.com/
+License: Free for anything: Unsplash license
+Over 300,000 free, high-resolution photos that can be used for anything.</description>
+    </item>
+    
+    <item>
+      <title>Form Handling with Gatsby.js and Netlify</title>
+      <link>https://codebushi.com/form-handling-gatsby-netlify/</link>
+      <pubDate>Sun, 25 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://codebushi.com/form-handling-gatsby-netlify/</guid>
+      <description>Having a working contact form is a basic requirement for many websites, but setting one up with a static site can be tricky. If you&amp;rsquo;re hosting your website with Netlify (which you should be), you can utilize their awesome form handling feature for free. Setting this up is super fast and easy, you&amp;rsquo;ll never want to jump through hoops or embed an ugly form again.
+For this example, I&amp;rsquo;ll be using a static site made with Gatsby.</description>
+    </item>
+    
+    <item>
+      <title>Hosting Your Static Website For Free</title>
+      <link>https://codebushi.com/hosting-your-static-website/</link>
+      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://codebushi.com/hosting-your-static-website/</guid>
+      <description>So you&amp;rsquo;ve just put the finishing touches on your static website and it&amp;rsquo;s time to share it with the world. The good news is, there are plenty of great hosting solutions out there to help simplify the process. Deploying a modern static site has become extremely fast, easy, and completely free! Best of all, these solutions all have caching and a content delivery network (CDN) built in for optimal performance.</description>
+    </item>
+    
+    <item>
+      <title>Creating a Modern Static Website Portfolio</title>
+      <link>https://codebushi.com/modern-static-website-portfolio/</link>
+      <pubDate>Sat, 24 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://codebushi.com/modern-static-website-portfolio/</guid>
+      <description>If you&amp;rsquo;re a web developer or someone who&amp;rsquo;s looking to get into the field, having a digital portfolio can be extremely valuable. A personal website is a fantastic way to showcase your work and help you get noticed. Fortunately, getting a website up and running is easier and cheaper than ever. With the rise of static site generators and hosting solutions, creating an online portfolio can be relatively easy and completely free!</description>
+    </item>
+    
+    <item>
+      <title>Gatsby.js with Contentful Content Management</title>
+      <link>https://codebushi.com/gatsby-with-contentful-cms/</link>
+      <pubDate>Sat, 20 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://codebushi.com/gatsby-with-contentful-cms/</guid>
+      <description>One of the most magical aspects of Gatsby.js is its ability to pull in data from a wide variety of sources. Leveraging the power of GraphQL, you can populate a Gatsby website with local markdown files, a CSV file, a MongoDB database, or from a list of popular content management systems (CMS). This means that if you have a Wordpress site, you can use Gatsby to pull in your posts and pages, and create a modern static website with a React front-end.</description>
+    </item>
+    
+    <item>
+      <title>React YouTube Video Background</title>
+      <link>https://codebushi.com/react-youtube-background/</link>
+      <pubDate>Mon, 11 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://codebushi.com/react-youtube-background/</guid>
+      <description>The first time I saw a video background on a website, I became obsessed. I thought parallax backgrounds were cool, but this was on a different level! Most video backgrounds use the video tag, paired with a small video file that&amp;rsquo;s optimized for the web. With some CSS, you can set the looping video as a background. There are some sites that offer free video backgrounds for download, such as https://coverr.</description>
+    </item>
+    
+    <item>
+      <title>Featured Blog Images In Gatsby.js</title>
+      <link>https://codebushi.com/gatsby-featured-images/</link>
+      <pubDate>Fri, 24 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://codebushi.com/gatsby-featured-images/</guid>
+      <description>With Gatsby.js, it&amp;rsquo;s pretty easy to get a static site up and running with one of their starter templates. The gatsby-starter-blog (https://github.com/gatsbyjs/gatsby-starter-blog) demonstrates how a Gatsby static site can function with blog posts written in markdown files. There is a list of blog posts on the homepage, but it would be nice to see a featured image with each post. Let&amp;rsquo;s dive into the gatsby-starter-blog and associate a featured or cover image to a markdown post.</description>
+    </item>
+    
+    <item>
+      <title>An Introduction To Using Gatsby Image</title>
+      <link>https://codebushi.com/using-gatsby-image/</link>
+      <pubDate>Sun, 19 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://codebushi.com/using-gatsby-image/</guid>
+      <description>With the rise of mobile browsing, the optimization of images on a website is more important than ever. If a site is image heavy, it&amp;rsquo;s always a good idea to lazy load images that are further down the page to speed up the initial render. However, optimizing and implementing lazy loading images can be pretty time consuming. Gatsby-image is a React component that works with Gatsby.js to give you an easy way to load and optimize images on a website.</description>
+    </item>
+    
+    <item>
+      <title>From Wordpress to Gatsby.js</title>
+      <link>https://codebushi.com/wordpress-to-gatsbyjs/</link>
+      <pubDate>Sat, 11 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://codebushi.com/wordpress-to-gatsbyjs/</guid>
+      <description>For the past 8+ years, my go-to weapon of choice when developing a website has been WordPress. According to a recent statistic by W3Techs, about 29% of all websites on the internet are built using this popular CMS. That&amp;rsquo;s a HUGE number, and for pretty good reason. WordPress has an extensive community backing it, with tons of themes and plugins for almost any website you can think of. It&amp;rsquo;s relatively easy to use and best of all, it&amp;rsquo;s free.</description>
+    </item>
+    
+  </channel>
+</rss>

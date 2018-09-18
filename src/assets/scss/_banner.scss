@@ -1,0 +1,78 @@
+.banner {
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 1px solid #111;
+    h1 {
+        color: #fff;
+        line-height: 1.5;
+    }
+    h2 {
+        color: #fff;
+        font-size: 1.4rem;
+        font-weight: 300;
+    }
+}
+
+.banner__content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 400px;
+    background-color: rgba(0,0,0,0.25);
+    z-index: 2;
+}
+
+.banner--home {
+    margin-bottom: 4rem;
+    // background-image: url(../img/bg-banner-home-mobile.jpg);
+    .banner__content {
+        height: 100vh;
+    }
+}
+
+.banner__image {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.banner--gatsby-starters {
+    background-image: url(../img/bg-banner-gatsby-starters.jpg);
+}
+
+.banner--nextjs-starters {
+    background-image: url(../img/bg-banner-nextjs-starters.jpg);
+}
+
+.banner--blog {
+    margin-bottom: 4rem;
+    background-image: url(../img/bg-banner-blog.jpg);
+}
+
+.banner__arrow {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+@include media-breakpoint-up(md) {
+    .banner {
+        h2 {
+            font-size: 1.8rem;
+        }
+    }
+    .banner--home {
+        // background-image: url(../img/bg-banner-home-min.jpg);
+        h1 {
+            font-size: 3.5rem;
+        }
+    }
+}

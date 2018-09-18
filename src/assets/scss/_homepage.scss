@@ -1,0 +1,14 @@
+.section--shaded {
+    background-color: $dark-secondary;
+}
+
+.home-logo {
+    margin: 0 auto 1rem;
+    max-width: 150px;
+}
+
+@include media-breakpoint-up(md) {
+    .home-logo {
+        max-width: 250px;
+    }
+}

@@ -1,0 +1,435 @@
+
+
+<!DOCTYPE html>
+
+
+
+<html amp lang="en-us" class="no-js">
+<head>
+    <title>Progressive Web Apps with React &amp; Preact.js</title>
+    <meta charset="utf-8">
+
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    
+        
+
+<link rel="amp-manifest" href="/amp-manifest.json">
+
+    
+
+
+
+
+    <link rel="canonical" href="https://codebushi.com/pwa-with-react-and-preact/">
+    <link rel="icon" type="image/x-icon" href="https://codebushi.com/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Explore Progressive Web Apps with React.js and build a News Feed PWA using Preact.js and a custom Service Worker with Google&#39;s Workbox.">
+
+    
+
+    <meta name="theme-color" content="#f72060" />
+
+    
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Code Bushi",
+    "alternateName": "Code Bushi",
+    "url": "https://codebushi.com/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "codebushi.com",
+  "url": "https://codebushi.com/"
+  
+  , "logo": "https://codebushi.com/codebushilogo.png"
+  
+  
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://codebushi.com/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "https://codebushi.com/pwa-with-react-and-preact/",
+          "name": "pwa-with-react-and-preact"
+        }
+    }]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Hunter Chang"
+  },
+  "headline": "Progressive Web Apps with React &amp; Preact.js",
+  "description": "Explore Progressive Web Apps with React.js and build a News Feed PWA using Preact.js and a custom Service Worker with Google&#39;s Workbox.",
+  "wordCount": 1715,
+  "datePublished" : "2018-09-05",
+  "dateModified" : "2018-09-05",
+  "image" : {
+      "@context": "http://schema.org",
+      "@type": "ImageObject",
+      "url": "https://codebushi.com/amp/img/pwa-react-preact.jpg",
+      "height" : 503,
+      "width" : 920
+    },
+  "mainEntityOfPage" : "https://codebushi.com/pwa-with-react-and-preact/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "codebushi.com",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://codebushi.com/codebushilogoamp.png",
+        "height" : 60,
+        "width" : 320
+    }
+  }
+}
+</script>
+
+
+
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+        html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{margin:.67em 0}mark{background:#ff0;color:#000}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}td,th{padding:0}*{box-sizing:border-box}button,input,select,textarea{font:13px/1.4 Helvetica,arial,freesans,clean,sans-serif}a{color:#4183c4}a:active,a:focus,a:hover{text-decoration:underline}.rule,hr{height:0;margin:15px 0;overflow:hidden;background:transparent;border:0;border-bottom:1px solid #ddd}.rule:after,.rule:before,hr:after,hr:before{display:table;content:""}.rule:after,hr:after{clear:both}fieldset{padding:0;margin:0;border:0}label{font-size:13px;font-weight:700}#adv_code_search .search-page-label,input[type=email],input[type=number],input[type=password],input[type=tel],input[type=text],input[type=url],textarea{min-height:34px;padding:7px 8px;font-size:13px;color:#333;vertical-align:middle;background-color:#fff;background-repeat:no-repeat;background-position:100%;border:1px solid #ccc;border-radius:3px;outline:none;box-shadow:inset 0 1px 2px rgba(0,0,0,.075)}#adv_code_search .focus.search-page-label,#adv_code_search .search-page-label:focus,.focused .drag-and-drop,input[type=email].focus,input[type=email]:focus,input[type=number].focus,input[type=number]:focus,input[type=password].focus,input[type=password]:focus,input[type=tel].focus,input[type=tel]:focus,input[type=text].focus,input[type=text]:focus,input[type=url].focus,input[type=url]:focus,textarea.focus,textarea:focus{border-color:#51a7e8;box-shadow:inset 0 1px 2px rgba(0,0,0,.075),0 0 5px rgba(81,167,232,.5)}.input-contrast,input.input-contrast{background-color:#fafafa}.input-contrast:focus,input.input-contrast:focus{background-color:#fff}:-moz-placeholder,::-webkit-input-placeholder{color:#aaa}::-webkit-validation-bubble-message{font-size:12px;color:#fff;background:#9c2400;border:0;border-radius:3px;-webkit-box-shadow:1px 1px 1px rgba(0,0,0,.1)}input::-webkit-validation-bubble-icon{display:none}::-webkit-validation-bubble-arrow{background-color:#9c2400;border:1px solid #9c2400;-webkit-box-shadow:1px 1px 1px rgba(0,0,0,.1)}.absent{color:#c00}.anchor{position:absolute;top:0;bottom:0;left:0;display:block;padding-right:6px;padding-left:30px;margin-left:-30px}.anchor:focus{outline:none}h1,h2,h3,h4,h5,h6{position:relative;margin-top:1em;margin-bottom:16px;font-weight:700;line-height:1.4}h1 .octicon-link,h2 .octicon-link,h3 .octicon-link,h4 .octicon-link,h5 .octicon-link,h6 .octicon-link{display:none;color:#000;vertical-align:middle}h1:hover .anchor,h2:hover .anchor,h3:hover .anchor,h4:hover .anchor,h5:hover .anchor,h6:hover .anchor{height:1em;padding-left:8px;margin-left:-30px;line-height:1;text-decoration:none}h1:hover .anchor .octicon-link,h2:hover .anchor .octicon-link,h3:hover .anchor .octicon-link,h4:hover .anchor .octicon-link,h5:hover .anchor .octicon-link,h6:hover .anchor .octicon-link{display:inline-block}h1 code,h1 tt,h2 code,h2 tt,h3 code,h3 tt,h4 code,h4 tt,h5 code,h5 tt,h6 code,h6 tt{font-size:inherit}h1{font-size:2.25em;line-height:1.2}h1,h2{padding-bottom:.3em;border-bottom:1px solid #eee}h2{font-size:1.75em;line-height:1.225}h3{font-size:1.5em;line-height:1.43}h4{font-size:1.25em}h5,h6{font-size:1em}h6{color:#777}blockquote,dl,ol,p,pre,table,ul{margin-top:0;margin-bottom:16px}hr{height:4px;margin:16px 0;background-color:#e7e7e7;border:0 none}ol,ul{padding-left:2em}ol.no-list,ul.no-list{padding:0;list-style-type:none}ol ol,ol ul,ul ol,ul ul{margin-top:0;margin-bottom:0}li>p{margin-top:16px}dl,dl dt{padding:0}dl dt{margin-top:16px;font-size:1em;font-style:italic;font-weight:700}dl dd{padding:0 16px;margin-bottom:16px}blockquote{padding:0 15px;color:#777;border-left:4px solid #ddd}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}table th{font-weight:700}table td,table th{padding:6px 13px;border:1px solid #ddd}table tr{background-color:#fff;border-top:1px solid #ccc}table tr:nth-child(2n){background-color:#f8f8f8}img{max-width:100%;box-sizing:border-box}span.frame,span.frame>span{display:block;overflow:hidden}span.frame>span{float:left;width:auto;padding:7px;margin:13px 0 0;border:1px solid #ddd}span.frame span img{display:block;float:left}span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}span.align-center{display:block;overflow:hidden;clear:both}span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}span.align-center span img{margin:0 auto;text-align:center}span.align-right{display:block;overflow:hidden;clear:both}span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}span.align-right span img{margin:0;text-align:right}span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}span.float-left span{margin:13px 0 0}span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}code,tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}code:after,code:before,tt:after,tt:before{letter-spacing:-.2em;content:"\00a0"}code br,tt br{display:none}del code{text-decoration:inherit;vertical-align:text-top}pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.highlight{margin-bottom:16px}.highlight pre,pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.highlight pre{margin-bottom:0;word-break:normal}pre,pre code,pre tt{word-wrap:normal}pre code,pre tt{display:inline;max-width:none;padding:0;margin:0;overflow:initial;line-height:inherit;background-color:transparent;border:0}pre code:after,pre code:before,pre tt:after,pre tt:before{content:normal}abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{text-decoration:none}ins,mark{background-color:#ff9;color:#000}mark{font-style:italic;font-weight:700}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border-top:1px solid #ccc;margin:1em 0}input,select{vertical-align:middle}body{background-color:#0f1621;color:#fff;font-size:14px;font-family:Helvetica Neue,Helvetica,Segoe UI,Arial,freesans,sans-serif}main{max-width:1180px;padding:30px;margin:0 auto}h1{font-weight:300;line-height:1.4em;margin:.5em 0;font-family:Georgia,serif;transition:color .4s}h1,h2{font-size:2em}h2,h3{font-weight:300;margin:30px 0}h3{font-size:1.8em}h4{font-size:1.6em}h4,h5{font-weight:300}h5{font-size:1.2em}h6{font-weight:300;font-size:1em}p{line-height:1.4em;font-size:1.2em;margin:15px 0}blockquote{border-left:5px solid #ff1d55;background-color:#ffe9ee;padding:1em;margin-bottom:1em}small{font-size:80%}.lightbox{background-color:rgba(3,121,196,.4);min-height:100vh;min-width:100vw;padding:30px}code{font:14px Consolas,Liberation Mono,Menlo,Courier,monospace}p>code{color:#ff1d55}pre code{display:block;background-color:#f7f7f7;padding:15px;overflow:auto;color:#123;line-height:1.4em}a{color:#f72060;text-decoration:none;transition:color .4s,background .4s}a:hover{color:#e9003a}ol,ul{margin:7.5px;padding:7.5px 15px}ol li,ul li{margin:7.5px 15px}.doc-parameters{list-style-type:none;padding:0}.doc-parameters li{display:block;margin:0;margin-bottom:15px}.doc-parameters .example,.doc-parameters blockquote{border-left:5px solid #0379c4;background-color:#96d5fd;color:#123;line-height:1em;font-size:1em;padding:1em;margin:0}.doc-parameters .example{background-color:#c8e9fe}.doc-parameters .parameter{display:block;padding:1em;background-color:#0379c4;color:#fff;margin:0}.doc-parameters .parameter strong{display:inline-block;padding:0 .5em;border-radius:.25em;line-height:2em;background-color:#025a92}hr{height:.25em;padding:0;margin:24px 0;background-color:#f7f7f7;border:0}.teaser{display:-ms-flexbox;display:flex;text-align:left;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:justify;justify-content:space-between}.teaser aside{-ms-flex-preferred-size:60%;flex-basis:60%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;padding:30px}@media (max-width:700px){.teaser aside{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser .content{-ms-flex-preferred-size:40%;flex-basis:40%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;color:dimgray;font-size:12px}@media (max-width:700px){.teaser .content{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser .content.content-full{-ms-flex-preferred-size:100%;flex-basis:100%}.teaser .content h3{font-size:14px;text-transform:uppercase;font-weight:600;color:#123}.main-index{text-align:center}.main-index amp-img{margin:15px auto;width:50%}@media (min-width:900px){h1{font-size:3em}.main-index p{font-size:2em}}.breadcrumbs{padding:1em;background-color:#f7f7f7}.breadcrumbs ul{display:block;margin:0;padding:0}.breadcrumbs ul li{display:inline-block;margin:0 .5em}.breadcrumbs ul li:before{content:" / ";position:relative;margin-left:-.5em;color:dimgray}.breadcrumbs ul li a{color:dimgray}.breadcrumbs ul li:last-child a{color:#ff1d55}header{background-color:#ff1d55;color:#fff;padding:30px;position:relative}header .brand{display:inline-block;position:absolute;left:30px;top:20px;line-height:15px;text-transform:uppercase;padding:7.5px;font-size:1.4em}header .brand:hover{background-color:#ff1d55;color:#fff}header a{color:#fff;text-decoration:none;border-radius:7.5px;padding:7.5px}header a:hover{text-decoration:none;background-color:#fff;color:#ff1d55}header nav ul{padding:0;margin:0;display:block;text-align:right}header nav ul li{padding:0;margin:0 7.5px;display:inline-block}header nav ul li.hamburger{display:none}header nav ul li.hamburger button{position:absolute;right:30px;top:20px;border:0;background-color:#fff;color:#ff1d55;font-weight:700;border-radius:50%;width:30px;height:30px;overflow:hidden;text-align:center;padding:0;margin:0}@media (max-width:900px){header nav ul li{display:none}header nav ul li.hamburger{display:inline-block}}.sidebarNavigation{width:210px;max-width:95%}.sidebarNavigation ul{padding:0;margin:0}.sidebarNavigation ul li{display:block}.sidebarNavigation ul li a{display:block;line-height:1.4em;padding:7.5px}footer{margin:60px auto;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:justify;justify-content:space-between;max-width:1180px;padding:30px;font-size:12px}footer a:hover{text-decoration:none}footer strong{text-transform:uppercase;margin-bottom:15px;display:block}footer strong a{color:#1d1d1d}footer ul{display:block;padding:0;margin:0}footer ul li{display:block;line-height:1.4em;padding:7.5px 0;margin:0}footer ul li a{color:dimgray}footer .quarter-section{margin-bottom:30px;-ms-flex-preferred-size:25%;flex-basis:25%}@media (max-width:900px){footer .quarter-section{-ms-flex-preferred-size:33%;flex-basis:33%}}@media (max-width:700px){footer .quarter-section{-ms-flex-preferred-size:50%;flex-basis:50%}}@media (max-width:500px){footer .quarter-section{-ms-flex-preferred-size:100%;flex-basis:100%}}.boxes{display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:justify;justify-content:space-between;font-size:12px}.boxes .box{-ms-flex-preferred-size:30%;flex-basis:30%;background-color:#f7f7f7;padding:30px;margin:7.5px 0;text-align:left;font-size:12px}.boxes .box h3{font-size:12px;line-height:1em;padding:0;margin:0}.boxes .box a{padding:0;color:#ff1d55}.boxes .box p{color:dimgray;font-size:12px;margin:7.5px 0}@media (max-width:900px){.boxes .box{-ms-flex-preferred-size:45%;flex-basis:45%}}@media (max-width:500px){.boxes .box{-ms-flex-preferred-size:100%;flex-basis:100%}}.mt-5,.my-5{margin-top:3rem}.mt-4,.my-4{margin-top:1.5rem}.mb-5,.my-5{margin-bottom:3rem}.mb-4,.my-4{margin-bottom:1.5rem}
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+<main>
+    <h1>Progressive Web Apps with React &amp; Preact.js</h1>
+    <div>
+        <p><small>September 5, 2018</small></p>
+    </div>
+    <div>
+        <p><amp-img src="https://codebushi.com/amp/img/pwa-react-preact.jpg" alt="" layout="responsive" width="920" height="503"></amp-img></p>
+    </div>
+    <div>
+        <p>Progressive Web Apps (PWA) have come onto the scene in a big way and with more mobile browsers supporting them, they might very well be the future of web applications. A PWA is actually pretty simple, and virtually any website or application can be converted into a baseline Progressive Web App. Here is a <a href="https://developers.google.com/web/progressive-web-apps/checklist" target="_blank">checklist</a> from Google on all the things a website needs in order to be considered a PWA. Basically if you have a website or web application that loads fast, is served over HTTPS, and is responsive for mobile and tablet devices, then you are already most of the way there. You&rsquo;ll just need a <code>manifest.json</code> file and a <a href="https://developers.google.com/web/fundamentals/primers/service-workers/" target="_blank">Service Worker</a> JavaScript file.</p>
+
+<p>The <code>manifest.json</code> file tells a compatible browser that you have a Progressive Web App and, on certain mobile devices, it will trigger a prompt to add the app to the Home Screen. It also includes information about the icons that are displayed once added to the Home Screen and the name of the application.</p>
+
+<p>A service worker is a bit more complex, but it&rsquo;s also very powerful. It&rsquo;s essentially a JavaScript file that runs in the background and listens for events, even if the website or application is closed. It can do things like cache the website&rsquo;s files for offline access, enable push notifications, and even access the camera of a mobile device. This is what give your PWA superpowers and makes it feel like a native mobile application.</p>
+
+<h4 class="mt-5 mb-3">Progressive Web Apps with React.js and Create React App</h4>
+
+<p>If you use React.js and <a href="https://github.com/facebook/create-react-app" target="_blank">Create React App</a> (CRA) to start your projects, the good news is that the resulting app will be a Progressive Web App by default. Create React App already has everything needed, including the <code>manifest.json</code> ( in the <code>/public</code> directory ) and a Service Worker file called <code>service-worker.js</code> ( handled by <code>registerServiceWorker.js</code> ). You&rsquo;ll have to run <code>yarn build</code> or <code>npm run build</code> and then serve the <code>/build</code> folder before seeing them in action.</p>
+
+<p><amp-img src="../img/pwa-react-1.jpg" alt="PWA with React 1" layout="responsive" width="830" height="840"></amp-img></p>
+
+<p>With the <code>manifest.json</code>, you&rsquo;ll need to generate and add the appropriate icons for the wide variety of devices. A great resource for generating a proper <code>manifest.json</code> file is <a href="https://app-manifest.firebaseapp.com/" target="_blank">app-manifest.firebaseapp.com</a>.</p>
+
+<p>The Service Worker provided by CRA will provide support for offline mode. This means that it will cache all the files generated by CRA during the build process and store them in the browser&rsquo;s Cache Storage. If you turn off your internet connection. the application will still load!</p>
+
+<p><amp-img src="../img/pwa-react-2.jpg" alt="PWA with React 2" layout="responsive" width="911" height="588"></amp-img></p>
+
+<p>This is, however, the bare minimum required for a PWA. The default <code>service-worker.js</code> won&rsquo;t cache any external data or resources and it won&rsquo;t have neat features such as push notifications. You&rsquo;ll probably want to <a href="https://medium.freecodecamp.org/how-to-build-a-pwa-with-create-react-app-and-custom-service-workers-376bd1fdc6d3" target="_blank">register a custom Service Worker</a> if you wish to get the most out your PWA.</p>
+
+<h4 class="mt-5 mb-3">PWAs with Preact.js, Custom Service Workers, and Workbox</h4>
+
+<p>While CRA is a fantastic tool, it doesn&rsquo;t do much for you in terms of code optimization. A Progressive Web App needs to be as fast and performant as possible, and this means smaller JavaScript bundles and code splitting. Enter <a href="https://preactjs.com/" target="_blank">Preact.js</a>, which is a slimmer alternative to React that also has built in support for PWAs. The <a href="https://github.com/developit/preact-cli">Preact CLI</a> functions much like Create React App and it&rsquo;s just as easy to use.</p>
+
+<p>The Service Worker that Preact CLI generates (called <code>sw.js</code>) will cache any generated files for offline use, but what if our web app uses an external API? If we fetch data or images from an external site, then those resources won&rsquo;t be cached by our default Service Worker. We&rsquo;d need to register our own <em>custom</em> Service Worker to enable more robust PWA features.</p>
+
+<p>Here is a <a href="https://medium.com/@applification/service-worker-magic-with-workbox-preact-c9ef35e063ec" target="_blank">wonderful article</a> by Dave Hudson on how to implement a custom Service Worker into Preact.js. If you&rsquo;d rather skip his post, I&rsquo;ve made a repo of his <a href="https://github.com/ChangoMan/Preact-Workbox" target="_blank">finished product here for download</a>. Also included in the repo is the latest version of <a href="https://developers.google.com/web/tools/workbox/" target="_blank">Workbox</a>, which is a set of libraries by Google for PWAs. Workbox makes writing our custom Service Worker much easier and exposes many advanced features for a PWA.</p>
+
+<h4 class="mt-5 mb-3">Building a News Feed PWA using Preact.js</h4>
+
+<p>Starting with the <a href="https://github.com/ChangoMan/Preact-Workbox">Preact-Workbox repo</a>, we&rsquo;ll be creating a super simple Progressive Web App that pulls in the news using this <a href="https://newsapi.org/">News API</a>. We will then add a few simple lines of code into our Service Worker to enable Workbox&rsquo;s offline caching features.</p>
+
+<h4 class="mt-4 mb-4"><a href="https://preactnews.netlify.com/">Preact.js News Feed PWA</a> <small>( <a href="https://github.com/ChangoMan/Preact-PWA-News">view source</a> )</small></h4>
+
+<p>Let&rsquo;s kick things off by cloning the repo and running the dev environment.</p>
+
+<pre><code class="language-bash">git clone https://github.com/ChangoMan/Preact-Workbox.git preact-demo
+cd preact-demo
+npm install
+npm run dev
+# Navigate to http://localhost:8080 in your browser
+</code></pre>
+
+<p>Here you will see the default boilerplate for a Preact app created with the CLI. Let&rsquo;s add some code to make our very basic news feed app. Open up the main CSS file at <code>src/style/index.css</code> and replace with the following:</p>
+
+<pre><code class="language-css">html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: #fafafa;
+  font-family: &quot;Helvetica Neue&quot;, arial, sans-serif;
+  font-weight: 400;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+.site-header {
+  padding: 2rem 0 1rem;
+}
+
+main {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: max-content;
+  grid-auto-flow: row dense;
+}
+
+.article a,
+.article a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.article img {
+  width: 100%;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.alert {
+  display: inline-block;
+  padding: 15px;
+  border-radius: 0.25rem;
+}
+
+.alert--error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+</code></pre>
+
+<p>Under the home component. we&rsquo;ll add the functionality to fetch for the news using the newsapi.org API. If you haven&rsquo;t done so already, sign up for a free account to get your own API key. Open up the file at <code>/src/routes/home/index.js</code> and replace with the following.</p>
+
+<pre><code class="language-jsx">import { h, Component } from &quot;preact&quot;;
+import style from &quot;./style&quot;;
+
+const apiKey = &quot;YOUR_NEWS_API_KEY&quot;;
+
+export default class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: null,
+      isLoaded: false,
+      selectedSource: &quot;techcrunch&quot;,
+      articles: [],
+      sources: []
+    };
+  }
+
+  componentDidMount() {
+    this.updateNews(this.state.selectedSource);
+    this.updateSources();
+  }
+
+  updateNews = async (source = this.state.selectedSource) =&gt; {
+    try {
+      const res = await fetch(`https://newsapi.org/v2/top-headlines?sources=${source}&amp;apiKey=${apiKey}`);
+      const json = await res.json();
+
+      this.setState(() =&gt; ({
+        isLoaded: true,
+        articles: json.articles,
+        selectedSource: source
+      }));
+    } catch (error) {
+      this.setState(() =&gt; ({ error }));
+    }
+  };
+
+  updateSources = async () =&gt; {
+    try {
+      const res = await fetch(`https://newsapi.org/v2/sources?apiKey=${apiKey}`);
+      const json = await res.json();
+
+      this.setState(() =&gt; ({
+        sources: json.sources
+      }));
+    } catch (error) {
+      this.setState(() =&gt; ({ error }));
+    }
+  };
+
+  render() {
+    const { error, isLoaded, articles } = this.state;
+    if (error) {
+      return (
+        &lt;div className=&quot;error&quot;&gt;
+          &lt;div className=&quot;alert alert--error&quot;&gt;Error: {error.message}&lt;/div&gt;
+        &lt;/div&gt;
+      );
+    } else if (!isLoaded) {
+      return &lt;div&gt;Loading...&lt;/div&gt;;
+    } else {
+      return (
+        &lt;div className={style.home}&gt;
+          &lt;div className=&quot;site-header&quot;&gt;
+            &lt;div className=&quot;select&quot;&gt;
+              &lt;select
+                value={this.state.selectedSource}
+                onChange={e =&gt; {
+                  this.updateNews(e.target.value);
+                }}&gt;
+                {this.state.sources.map(source =&gt; {
+                  return (
+                    &lt;option value={source.id} key={source.id}&gt;
+                      {source.name}
+                    &lt;/option&gt;
+                  );
+                })}
+              &lt;/select&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;main&gt;
+            {articles.map((article, index) =&gt; (
+              &lt;div className=&quot;article&quot; key={index}&gt;
+                &lt;h2&gt;
+                  &lt;a href={article.url}&gt;{article.title}&lt;/a&gt;
+                &lt;/h2&gt;
+                &lt;img src={article.urlToImage} alt=&quot;&quot; /&gt;
+                &lt;p&gt;{article.description}&lt;/p&gt;
+              &lt;/div&gt;
+            ))}
+          &lt;/main&gt;
+        &lt;/div&gt;
+      );
+    }
+  }
+}
+</code></pre>
+
+<p>Your app should now be getting some news articles, with the default dropdown source being <code>techcrunch</code>. If you change the dropdown to a different source, it will pull in a different set of articles. Let&rsquo;s open up our <code>service-worker.js</code> file and take a peek.</p>
+
+<pre><code class="language-javascript">workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
+</code></pre>
+
+<p>The Service Worker uses Workbox to precache any files that will be generated by Preact.js during the build process. This is much like the default behavior provided by CRA mentioned above. However, we also want to detect and cache the news articles fetched by the News API. We&rsquo;ll simply replace the contents with the following:</p>
+
+<pre><code class="language-javascript">// Default Precache for files generated by Preact.js
+workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
+
+// Detect and register any fetch calls using 'https://' and use the Network First Strategy by Workbox
+workbox.routing.registerRoute(/(?:https:\/\/.*)/,workbox.strategies.networkFirst());
+
+// Handle any images
+workbox.routing.registerRoute(
+  // Cache image files
+  /.*\.(?:png|jpg|jpeg|svg|gif)/,
+  // Use the cache if it's available
+  workbox.strategies.cacheFirst({
+    // Use a custom cache name
+    cacheName: &quot;image-cache&quot;,
+    plugins: [
+      new workbox.expiration.Plugin({
+        // Cache only 20 images
+        maxEntries: 20,
+        // Cache for a maximum of a week
+        maxAgeSeconds: 7 * 24 * 60 * 60
+      })
+    ]
+  })
+);
+</code></pre>
+
+<p>Using Workbox, we can quickly and easily detect fetch requests and deal with them using <a href="https://developers.google.com/web/tools/workbox/guides/route-requests#handling_a_route_with_a_workbox_strategy" target="_blank">Workbox Strategies</a>. There are also a variety of <a href="https://developers.google.com/web/tools/workbox/guides/common-recipes" target="_blank">Workbox Recipes</a> to help with things like image caching and Google Fonts. With this added, our Progressive Web App is done! It&rsquo;s still very basic, but it will load offline and cache the news articles properly. We can do the final build and preview our app.</p>
+
+<pre><code class="language-bash"># Build and serve the assets
+npm run serve
+</code></pre>
+
+<p>When you <code>serve</code> with Preact, it will prompt you to accept some permissions so that it can load over <code>https</code>. If you navigate to <a href="https://localhost:8080">https://localhost:8080</a>, open up your Chrome inspector and head over to the Application tab. Make sure the <code>service-worker.js</code> is active and Workbox is working. You might need to reload the page a couple of times for the caching to kick in.</p>
+
+<p><amp-img src="../img/pwa-react-3.jpg" alt="PWA with React 3" layout="responsive" width="920" height="600"></amp-img></p>
+
+<p>If things don&rsquo;t look right, try clearing the Application&rsquo;s cache under <code>Clear storage &gt; Clear site data</code> and reload the page. You can simulate going offline by checking the <code>Offline</code> box under Service Workers. The app should still load the Tech Crunch articles even if offline. If you browse to other sources before going offline, those should also be cached and served. Sources that you didn&rsquo;t visit will result in an error if you try selecting them while offline.</p>
+
+<p>To audit your PWA, use Google&rsquo;s <a href="https://developers.google.com/web/tools/lighthouse/" target="_blank">Lighthouse</a> in the Chrome Dev Tools. It will simulate a mobile device and throttle the internet to 3G speeds, eventually giving you some scores and advice for improvement.</p>
+
+<p><amp-img src="../img/pwa-react-4.jpg" alt="PWA with React 4" layout="responsive" width="856" height="690"></amp-img></p>
+
+<p>You can also <a href="https://codebushi.com/hosting-your-static-website/">host the app</a> a variety of ways since it&rsquo;s essentially a static website after the build process. Visit your hosted app or the <a href="https://preactnews.netlify.com/" target="_blank">example app</a> using an Android device with Chrome, and you&rsquo;ll see the prompt to add the app to your Home Screen. Apple iOS 11.3 and above will also support Progressive Web Apps, but I&rsquo;m not sure Safari on mobile will pop up a prompt like Chrome does.</p>
+
+<p>Hopefully this was a good intro into Progressive Web Apps. You can take things further by experimenting with more of Google Workbox&rsquo;s recipes and features, making your PWA even better!</p>
+
+<h4 class="mt-4 mb-4"><a href="https://preactnews.netlify.com/">Preact.js News Feed PWA</a> <small>( <a href="https://github.com/ChangoMan/Preact-PWA-News">view source</a> )</small></h4>
+
+    </div>
+</main>
+
+
+
+<amp-analytics type="googleanalytics">
+    <script type="application/json">
+        {
+            "vars": {
+                "account": "UA-115990515-1"
+            },
+            "triggers": {"trackEvent":{"on":"click","request":"event","selector":"body","vars":{"eventAction":"click","eventCategory":"body-click"}},"trackPageview":{"on":"visible","request":"pageview"}}
+        }
+    </script>
+</amp-analytics>
+
+</body>
+</html>

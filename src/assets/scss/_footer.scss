@@ -1,0 +1,26 @@
+.site-footer {
+    background-color: #0c0f17;
+}
+.site-footer__logo {
+    max-width: 260px;
+    margin: 0 auto;
+}
+
+.social-icon-link {
+    display: inline-block;
+    font-size: 2rem;
+    margin: 0 10px;
+    line-height: 1;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.site-footer__nav {
+    a {
+        color: #fff;
+        &:hover, &:focus {
+            color: $primary;
+        }
+    }
+}

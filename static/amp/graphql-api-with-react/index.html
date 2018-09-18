@@ -1,0 +1,415 @@
+
+
+<!DOCTYPE html>
+
+
+
+<html amp lang="en-us" class="no-js">
+<head>
+    <title>GraphQL API with React.js</title>
+    <meta charset="utf-8">
+
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    
+        
+
+<link rel="amp-manifest" href="/amp-manifest.json">
+
+    
+
+
+
+
+    <link rel="canonical" href="https://codebushi.com/graphql-api-with-react/">
+    <link rel="icon" type="image/x-icon" href="https://codebushi.com/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="A tutorial for using modern GraphQL APIs with React.js. We&#39;ll use the GraphiQL explorer to construct our query and then use React and axios to make the API request.">
+
+    
+
+    <meta name="theme-color" content="#f72060" />
+
+    
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Code Bushi",
+    "alternateName": "Code Bushi",
+    "url": "https://codebushi.com/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "codebushi.com",
+  "url": "https://codebushi.com/"
+  
+  , "logo": "https://codebushi.com/codebushilogo.png"
+  
+  
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://codebushi.com/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "https://codebushi.com/graphql-api-with-react/",
+          "name": "graphql-api-with-react"
+        }
+    }]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Hunter Chang"
+  },
+  "headline": "GraphQL API with React.js",
+  "description": "A tutorial for using modern GraphQL APIs with React.js. We&#39;ll use the GraphiQL explorer to construct our query and then use React and axios to make the API request.",
+  "wordCount": 1318,
+  "datePublished" : "2018-04-17",
+  "dateModified" : "2018-04-17",
+  "image" : {
+      "@context": "http://schema.org",
+      "@type": "ImageObject",
+      "url": "https://codebushi.com/amp/img/graphql-with-react.jpg",
+      "height" : 503,
+      "width" : 920
+    },
+  "mainEntityOfPage" : "https://codebushi.com/graphql-api-with-react/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "codebushi.com",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://codebushi.com/codebushilogoamp.png",
+        "height" : 60,
+        "width" : 320
+    }
+  }
+}
+</script>
+
+
+
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+        html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{margin:.67em 0}mark{background:#ff0;color:#000}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}td,th{padding:0}*{box-sizing:border-box}button,input,select,textarea{font:13px/1.4 Helvetica,arial,freesans,clean,sans-serif}a{color:#4183c4}a:active,a:focus,a:hover{text-decoration:underline}.rule,hr{height:0;margin:15px 0;overflow:hidden;background:transparent;border:0;border-bottom:1px solid #ddd}.rule:after,.rule:before,hr:after,hr:before{display:table;content:""}.rule:after,hr:after{clear:both}fieldset{padding:0;margin:0;border:0}label{font-size:13px;font-weight:700}#adv_code_search .search-page-label,input[type=email],input[type=number],input[type=password],input[type=tel],input[type=text],input[type=url],textarea{min-height:34px;padding:7px 8px;font-size:13px;color:#333;vertical-align:middle;background-color:#fff;background-repeat:no-repeat;background-position:100%;border:1px solid #ccc;border-radius:3px;outline:none;box-shadow:inset 0 1px 2px rgba(0,0,0,.075)}#adv_code_search .focus.search-page-label,#adv_code_search .search-page-label:focus,.focused .drag-and-drop,input[type=email].focus,input[type=email]:focus,input[type=number].focus,input[type=number]:focus,input[type=password].focus,input[type=password]:focus,input[type=tel].focus,input[type=tel]:focus,input[type=text].focus,input[type=text]:focus,input[type=url].focus,input[type=url]:focus,textarea.focus,textarea:focus{border-color:#51a7e8;box-shadow:inset 0 1px 2px rgba(0,0,0,.075),0 0 5px rgba(81,167,232,.5)}.input-contrast,input.input-contrast{background-color:#fafafa}.input-contrast:focus,input.input-contrast:focus{background-color:#fff}:-moz-placeholder,::-webkit-input-placeholder{color:#aaa}::-webkit-validation-bubble-message{font-size:12px;color:#fff;background:#9c2400;border:0;border-radius:3px;-webkit-box-shadow:1px 1px 1px rgba(0,0,0,.1)}input::-webkit-validation-bubble-icon{display:none}::-webkit-validation-bubble-arrow{background-color:#9c2400;border:1px solid #9c2400;-webkit-box-shadow:1px 1px 1px rgba(0,0,0,.1)}.absent{color:#c00}.anchor{position:absolute;top:0;bottom:0;left:0;display:block;padding-right:6px;padding-left:30px;margin-left:-30px}.anchor:focus{outline:none}h1,h2,h3,h4,h5,h6{position:relative;margin-top:1em;margin-bottom:16px;font-weight:700;line-height:1.4}h1 .octicon-link,h2 .octicon-link,h3 .octicon-link,h4 .octicon-link,h5 .octicon-link,h6 .octicon-link{display:none;color:#000;vertical-align:middle}h1:hover .anchor,h2:hover .anchor,h3:hover .anchor,h4:hover .anchor,h5:hover .anchor,h6:hover .anchor{height:1em;padding-left:8px;margin-left:-30px;line-height:1;text-decoration:none}h1:hover .anchor .octicon-link,h2:hover .anchor .octicon-link,h3:hover .anchor .octicon-link,h4:hover .anchor .octicon-link,h5:hover .anchor .octicon-link,h6:hover .anchor .octicon-link{display:inline-block}h1 code,h1 tt,h2 code,h2 tt,h3 code,h3 tt,h4 code,h4 tt,h5 code,h5 tt,h6 code,h6 tt{font-size:inherit}h1{font-size:2.25em;line-height:1.2}h1,h2{padding-bottom:.3em;border-bottom:1px solid #eee}h2{font-size:1.75em;line-height:1.225}h3{font-size:1.5em;line-height:1.43}h4{font-size:1.25em}h5,h6{font-size:1em}h6{color:#777}blockquote,dl,ol,p,pre,table,ul{margin-top:0;margin-bottom:16px}hr{height:4px;margin:16px 0;background-color:#e7e7e7;border:0 none}ol,ul{padding-left:2em}ol.no-list,ul.no-list{padding:0;list-style-type:none}ol ol,ol ul,ul ol,ul ul{margin-top:0;margin-bottom:0}li>p{margin-top:16px}dl,dl dt{padding:0}dl dt{margin-top:16px;font-size:1em;font-style:italic;font-weight:700}dl dd{padding:0 16px;margin-bottom:16px}blockquote{padding:0 15px;color:#777;border-left:4px solid #ddd}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}table th{font-weight:700}table td,table th{padding:6px 13px;border:1px solid #ddd}table tr{background-color:#fff;border-top:1px solid #ccc}table tr:nth-child(2n){background-color:#f8f8f8}img{max-width:100%;box-sizing:border-box}span.frame,span.frame>span{display:block;overflow:hidden}span.frame>span{float:left;width:auto;padding:7px;margin:13px 0 0;border:1px solid #ddd}span.frame span img{display:block;float:left}span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}span.align-center{display:block;overflow:hidden;clear:both}span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}span.align-center span img{margin:0 auto;text-align:center}span.align-right{display:block;overflow:hidden;clear:both}span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}span.align-right span img{margin:0;text-align:right}span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}span.float-left span{margin:13px 0 0}span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}code,tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}code:after,code:before,tt:after,tt:before{letter-spacing:-.2em;content:"\00a0"}code br,tt br{display:none}del code{text-decoration:inherit;vertical-align:text-top}pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.highlight{margin-bottom:16px}.highlight pre,pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.highlight pre{margin-bottom:0;word-break:normal}pre,pre code,pre tt{word-wrap:normal}pre code,pre tt{display:inline;max-width:none;padding:0;margin:0;overflow:initial;line-height:inherit;background-color:transparent;border:0}pre code:after,pre code:before,pre tt:after,pre tt:before{content:normal}abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{text-decoration:none}ins,mark{background-color:#ff9;color:#000}mark{font-style:italic;font-weight:700}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border-top:1px solid #ccc;margin:1em 0}input,select{vertical-align:middle}body{background-color:#0f1621;color:#fff;font-size:14px;font-family:Helvetica Neue,Helvetica,Segoe UI,Arial,freesans,sans-serif}main{max-width:1180px;padding:30px;margin:0 auto}h1{font-weight:300;line-height:1.4em;margin:.5em 0;font-family:Georgia,serif;transition:color .4s}h1,h2{font-size:2em}h2,h3{font-weight:300;margin:30px 0}h3{font-size:1.8em}h4{font-size:1.6em}h4,h5{font-weight:300}h5{font-size:1.2em}h6{font-weight:300;font-size:1em}p{line-height:1.4em;font-size:1.2em;margin:15px 0}blockquote{border-left:5px solid #ff1d55;background-color:#ffe9ee;padding:1em;margin-bottom:1em}small{font-size:80%}.lightbox{background-color:rgba(3,121,196,.4);min-height:100vh;min-width:100vw;padding:30px}code{font:14px Consolas,Liberation Mono,Menlo,Courier,monospace}p>code{color:#ff1d55}pre code{display:block;background-color:#f7f7f7;padding:15px;overflow:auto;color:#123;line-height:1.4em}a{color:#f72060;text-decoration:none;transition:color .4s,background .4s}a:hover{color:#e9003a}ol,ul{margin:7.5px;padding:7.5px 15px}ol li,ul li{margin:7.5px 15px}.doc-parameters{list-style-type:none;padding:0}.doc-parameters li{display:block;margin:0;margin-bottom:15px}.doc-parameters .example,.doc-parameters blockquote{border-left:5px solid #0379c4;background-color:#96d5fd;color:#123;line-height:1em;font-size:1em;padding:1em;margin:0}.doc-parameters .example{background-color:#c8e9fe}.doc-parameters .parameter{display:block;padding:1em;background-color:#0379c4;color:#fff;margin:0}.doc-parameters .parameter strong{display:inline-block;padding:0 .5em;border-radius:.25em;line-height:2em;background-color:#025a92}hr{height:.25em;padding:0;margin:24px 0;background-color:#f7f7f7;border:0}.teaser{display:-ms-flexbox;display:flex;text-align:left;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:justify;justify-content:space-between}.teaser aside{-ms-flex-preferred-size:60%;flex-basis:60%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;padding:30px}@media (max-width:700px){.teaser aside{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser .content{-ms-flex-preferred-size:40%;flex-basis:40%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;color:dimgray;font-size:12px}@media (max-width:700px){.teaser .content{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser .content.content-full{-ms-flex-preferred-size:100%;flex-basis:100%}.teaser .content h3{font-size:14px;text-transform:uppercase;font-weight:600;color:#123}.main-index{text-align:center}.main-index amp-img{margin:15px auto;width:50%}@media (min-width:900px){h1{font-size:3em}.main-index p{font-size:2em}}.breadcrumbs{padding:1em;background-color:#f7f7f7}.breadcrumbs ul{display:block;margin:0;padding:0}.breadcrumbs ul li{display:inline-block;margin:0 .5em}.breadcrumbs ul li:before{content:" / ";position:relative;margin-left:-.5em;color:dimgray}.breadcrumbs ul li a{color:dimgray}.breadcrumbs ul li:last-child a{color:#ff1d55}header{background-color:#ff1d55;color:#fff;padding:30px;position:relative}header .brand{display:inline-block;position:absolute;left:30px;top:20px;line-height:15px;text-transform:uppercase;padding:7.5px;font-size:1.4em}header .brand:hover{background-color:#ff1d55;color:#fff}header a{color:#fff;text-decoration:none;border-radius:7.5px;padding:7.5px}header a:hover{text-decoration:none;background-color:#fff;color:#ff1d55}header nav ul{padding:0;margin:0;display:block;text-align:right}header nav ul li{padding:0;margin:0 7.5px;display:inline-block}header nav ul li.hamburger{display:none}header nav ul li.hamburger button{position:absolute;right:30px;top:20px;border:0;background-color:#fff;color:#ff1d55;font-weight:700;border-radius:50%;width:30px;height:30px;overflow:hidden;text-align:center;padding:0;margin:0}@media (max-width:900px){header nav ul li{display:none}header nav ul li.hamburger{display:inline-block}}.sidebarNavigation{width:210px;max-width:95%}.sidebarNavigation ul{padding:0;margin:0}.sidebarNavigation ul li{display:block}.sidebarNavigation ul li a{display:block;line-height:1.4em;padding:7.5px}footer{margin:60px auto;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:justify;justify-content:space-between;max-width:1180px;padding:30px;font-size:12px}footer a:hover{text-decoration:none}footer strong{text-transform:uppercase;margin-bottom:15px;display:block}footer strong a{color:#1d1d1d}footer ul{display:block;padding:0;margin:0}footer ul li{display:block;line-height:1.4em;padding:7.5px 0;margin:0}footer ul li a{color:dimgray}footer .quarter-section{margin-bottom:30px;-ms-flex-preferred-size:25%;flex-basis:25%}@media (max-width:900px){footer .quarter-section{-ms-flex-preferred-size:33%;flex-basis:33%}}@media (max-width:700px){footer .quarter-section{-ms-flex-preferred-size:50%;flex-basis:50%}}@media (max-width:500px){footer .quarter-section{-ms-flex-preferred-size:100%;flex-basis:100%}}.boxes{display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:justify;justify-content:space-between;font-size:12px}.boxes .box{-ms-flex-preferred-size:30%;flex-basis:30%;background-color:#f7f7f7;padding:30px;margin:7.5px 0;text-align:left;font-size:12px}.boxes .box h3{font-size:12px;line-height:1em;padding:0;margin:0}.boxes .box a{padding:0;color:#ff1d55}.boxes .box p{color:dimgray;font-size:12px;margin:7.5px 0}@media (max-width:900px){.boxes .box{-ms-flex-preferred-size:45%;flex-basis:45%}}@media (max-width:500px){.boxes .box{-ms-flex-preferred-size:100%;flex-basis:100%}}.mt-5,.my-5{margin-top:3rem}.mt-4,.my-4{margin-top:1.5rem}.mb-5,.my-5{margin-bottom:3rem}.mb-4,.my-4{margin-bottom:1.5rem}
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+<main>
+    <h1>GraphQL API with React.js</h1>
+    <div>
+        <p><small>April 17, 2018</small></p>
+    </div>
+    <div>
+        <p><amp-img src="https://codebushi.com/amp/img/graphql-with-react.jpg" alt="" layout="responsive" width="920" height="503"></amp-img></p>
+    </div>
+    <div>
+        <p>Many new APIs are moving away from REST and embracing the change to <a href="http://graphql.org/">GraphQL</a>. GitHub&rsquo;s <a href="https://developer.github.com/v4/">API V4</a> is one example of this, and that&rsquo;s because GraphQL offers a lot more flexibility when querying for data. This tutorial will go over how to incorporate and make queries using React and a modern GraphQL API.</p>
+
+<p>For this demo, we&rsquo;ll be using <a href="https://github.com/AniList/ApiV2-GraphQL-Docs">AniLists&rsquo;s V2 API</a> to get a list of anime titles and their cover images. I chose this API because it&rsquo;s ready to use without any configurations or OAuth tokens. GitHub&rsquo;s V4 API works in a similar way, but you&rsquo;ll need to create an access token and include it with each request. I&rsquo;ll also be using <a href="https://github.com/axios/axios">axios</a> to make our queries, this should give a general overview on the basics of using GraphQL and React.</p>
+
+<h4 class="mt-4 mb-4"><a href="http://graphql-react.surge.sh/">GraphQL API with React Demo</a> <small>( <a href="https://github.com/codebushi/graphql-anime">view source</a> )</small></h4>
+
+<p>To keep things simple, I&rsquo;m going to use <a href="https://github.com/facebook/create-react-app">create-react-app</a> to start things off. Once you have create-react-app installed, we can create our app.</p>
+
+<pre><code class="language-bash"># Create the app
+npx create-react-app anime-graphql
+
+cd anime-graphql
+
+# Install axios, use 'npm install axios' if you don't use yarn
+yarn add axios
+
+# Start the app, browse to http://localhost:3000/
+yarn start
+</code></pre>
+
+<p>We now have our generic app running and <code>axios</code> is the only additional package we needed to install. Open up <code>src/App.js</code> and strip out the boilerplate JSX until we&rsquo;re left with this</p>
+
+<pre><code class="language-jsx">import React, { Component } from 'react';
+import './App.css';
+
+class App extends Component {
+  render() {
+    return (
+      &lt;div&gt;
+
+      &lt;/div&gt;
+    );
+  }
+}
+export default App;
+</code></pre>
+
+<h3 class="mt-5 mb-3">GraphiQL Explorer</h3>
+
+<p>AniList has some pretty good <a href="https://anilist.gitbooks.io/anilist-apiv2-docs/graphql/getting-started.html">documentation</a> for their API, including an example GraphQL <code>query</code>. Their example is to get a single anime title by providing an ID. If we want to get a big list of cover images, we&rsquo;ll need to check out their GraphiQL explorer. In order to use this feature, you&rsquo;ll need to <a href="https://anilist.co/register">register</a> for free with AniList. You only need to register if you want to play with their explorer, it&rsquo;s <strong>not required</strong> for our React app.</p>
+
+<p>Most GraphQL APIs will come with an explorer where you can make test queries and search for possible values. Let&rsquo;s check out AniList&rsquo;s <a href="https://anilist.co/graphiql">https://anilist.co/graphiql</a>.</p>
+
+<p><amp-img src="../img/react-graphiql.png" alt="GraphiQL Preview" layout="responsive" width="1383" height="741"></amp-img></p>
+
+<p>The left pane is where you can make a query and the right pane is the result once you hit the &ldquo;play&rdquo; button. The far right has a Documentation Explorer which shows all the different fields and values. The left pane also has an auto-complete feature, if you hit <code>control+space</code> within a bracket, it will show a popup of all available fields. This is one of the best features of a GraphQL API since you can quickly and easily make a query and just copy and paste it into your app.</p>
+
+<p>We can plug in a test query to see this in action. Copy the following into the left pane and hit play</p>
+
+<pre><code class="language-javascript">{
+  Media(id: 1) {
+    id
+    title {
+      romaji
+      english
+      native
+    }
+  }
+}
+</code></pre>
+
+<p>This will make a <code>Media</code> query with <code>id: 1</code>, and get all the titles associated with it. If you put your cursor above <code>title</code> and hit <code>control+space</code>, you can select any other field from the auto-complete and query for that as well. A GraphQL query will only return the fields you ask for, which eliminates the over-fetching of unnecessary data.</p>
+
+<p>To get a list of titles, we&rsquo;ll need to query for a <code>Page</code> and then add <code>media()</code> within that query. Search for <code>Page</code> in the Document Explorer and it will list some additional information. Our query will look something like this:</p>
+
+<pre><code class="language-javascript">{
+  Page {
+    media(isAdult: false, sort: POPULARITY_DESC) {
+      id
+      title {
+        romaji
+        english
+      }
+      coverImage {
+        large
+      }
+    }
+  }
+}
+</code></pre>
+
+<p>Note that <code>media()</code> requires at least one argument to work, so we&rsquo;ll set isAdult to false and add a sort. We can pass additional filters into the media query, like the <code>season</code> and <code>seasonYear</code>. Play around with the auto-complete and the documentations to find available fields. We&rsquo;re also asking for the coverImage, which will be a url to the image.</p>
+
+<h3 class="mt-5 mb-3">Making the Query with React.js</h3>
+
+<p>Once we are happy with the query, we can set things up in our React app. Be sure to import <code>axios</code> and set up some initial state. Using async/await, we create a function called <code>getAnime</code> to request our data. An <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async function</a> is newer syntax for handling Promises in JavaScript.</p>
+
+<pre><code class="language-jsx">// Be sure to import axios
+import axios from 'axios';
+
+class App extends Component {
+
+state = {
+  error: null,
+  isLoaded: false,
+  items: []
+}
+
+getAnime = async (query, variables) =&gt; {
+  try {
+    const response = await axios.post('https://graphql.anilist.co', {
+      query,
+      variables
+    });
+
+    // Log the response so we can look at it in the console
+    console.log(response.data)
+
+    // Set the data to the state
+    this.setState(() =&gt; ({
+      isLoaded: true,
+      items: response.data.data.Page.media
+    }));
+
+  } catch (error) {
+    // If there's an error, set the error to the state
+    this.setState(() =&gt; ({ error }))
+  }
+}
+</code></pre>
+
+<p>The one and only AniList endpoint is <code>https://graphql.anilist.co</code> which we have to <code>POST</code> to. Using <code>axios.post()</code>, we pass in the endpoint as the first argument and an object with the query as the second argument. When the query is complete, we set the data to the <code>response</code> constant and update the state. Let&rsquo;s add a <code>componentDidMount()</code> lifecycle method and call <code>this.getAnime()</code> with our <code>query</code>.</p>
+
+<pre><code class="language-jsx">componentDidMount() {
+
+  // This is the GraphQL query
+  const query = `
+  query {
+    Page {
+      media(isAdult: false, sort: POPULARITY_DESC) {
+        id
+        title {
+          romaji
+          english
+        }
+        coverImage {
+          large
+        }
+      }
+    }
+  }
+  `;
+
+  // These variables are optional, leave empty for now
+  const variables = {};
+
+  // We call the method here to execute our async function
+  this.getAnime(query, variables)
+
+}
+</code></pre>
+
+<p>For the <code>query</code> constant, we can basically copy out what we have from the GraphiQL explorer and paste it into a template string, adding <code>query</code> before the first bracket. The <code>variables</code> constant is optional and it&rsquo;s a way of passing variables into the query. Finally we call <code>this.getAnime()</code> and pass in the variables. Open up your browser&rsquo;s inspector and head into the Network tab, you should see the request and the response in the console!</p>
+
+<h3 class="mt-5 mb-3">Rendering the Data</h3>
+
+<p>With the data in hand, the hard part is over. Only thing left is to update our <code>render()</code> method and map out our cover images. We&rsquo;ll also create a simple component to house each item.</p>
+
+<pre><code class="language-jsx">// Our simple component for each grid item
+const GridItem = (props) =&gt; (
+  &lt;div className=&quot;grid__flex&quot;&gt;
+    &lt;img className=&quot;grid__img&quot; src={props.image} /&gt;
+  &lt;/div&gt;
+)
+
+class App extends Component {
+...
+
+// The new render()
+render() {
+
+  const { error, isLoaded, items } = this.state;
+
+  if (error) {
+    return &lt;div&gt;{error.message}&lt;/div&gt;;
+  } else if (!isLoaded) {
+    return &lt;div&gt;Loading...&lt;/div&gt;;
+  } else {
+
+    return (
+      &lt;div className=&quot;grid&quot;&gt;
+        {items.map(item =&gt; (
+          &lt;GridItem key={item.id} image={item.coverImage.large} /&gt;
+        ))}
+      &lt;/div&gt;
+    );
+
+  }
+}
+</code></pre>
+
+<p>You should be seeing the images in your browser! Let&rsquo;s spice things up a bit with some CSS Grid, open up <code>src/App.css</code> and replace with the following.</p>
+
+<pre><code class="language-css">html, body {
+  margin: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-flow: dense;
+}
+
+.grid__flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</code></pre>
+
+<p>Nice, the images should now be showing in a responsive grid! Now try creating a new query with the explorer and copy/paste it into the React App. You can also try out <a href="https://developer.github.com/v4/">GitHub&rsquo;s GraphQL API</a> and play with their explorer as well, everything works pretty much the same except you&rsquo;ll need to generate an OAuth token and add it to your request headers. Here&rsquo;s a sample of what a GitHub query function looks like.</p>
+
+<pre><code class="language-jsx">getRepo = async (query, variables) =&gt; {
+  try {
+    const response = await axios.post(
+      &quot;https://api.github.com/graphql&quot;,
+      {
+        query: gitQuery,
+        variables: variables
+      },
+      {
+        headers: {
+          Authorization: &quot;token YOUR_TOKEN_HERE&quot;
+        }
+      }
+    );
+    console.log(response.data);
+  } catch (error) {
+    console.log(error);
+  }
+};
+</code></pre>
+
+<h4 class="mt-4 mb-4"><a href="http://graphql-react.surge.sh/">GraphQL API with React Tutorial</a> <small>( <a href="https://github.com/codebushi/graphql-anime">view source</a> )</small></h4>
+
+    </div>
+</main>
+
+
+
+<amp-analytics type="googleanalytics">
+    <script type="application/json">
+        {
+            "vars": {
+                "account": "UA-115990515-1"
+            },
+            "triggers": {"trackEvent":{"on":"click","request":"event","selector":"body","vars":{"eventAction":"click","eventCategory":"body-click"}},"trackPageview":{"on":"visible","request":"pageview"}}
+        }
+    </script>
+</amp-analytics>
+
+</body>
+</html>

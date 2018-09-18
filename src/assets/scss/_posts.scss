@@ -1,0 +1,17 @@
+.post {
+    margin-bottom: 4rem;
+    padding: 1.3rem;
+    border: 1px solid #444;
+}
+.post__title {
+    font-size: 1.5rem;
+}
+
+@include media-breakpoint-up(lg) {
+    .post__title {
+        font-size: 1.6rem;
+    }
+    .post__excerpt {
+        font-size: .9rem;
+    }
+}
