@@ -6,10 +6,20 @@
     <description>Recent content on Code Bushi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 20 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codebushi.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>An Introduction To Using Gatsby Image &amp; Gatsby.js V2</title>
+      <link>https://codebushi.com/using-gatsby-image/</link>
+      <pubDate>Thu, 20 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://codebushi.com/using-gatsby-image/</guid>
+      <description>This post has been updated for Gatsby.js V2. If you are on V1, here is an older article for legacy users.
+Gatsby.js V2 was recently launched and there have been a few small changes to how Gatsby Image is implemented. Gatsby Image is a React component that makes it easy to optimize all the images on your website. It will resize images for you, so you don&amp;rsquo;t load huge images on a mobile device, and it will also lazy load your images with a cool &amp;ldquo;blur-up&amp;rdquo; effect so that your initial page loads are blazing fast.</description>
+    </item>
     
     <item>
       <title>Vue.js and Chart.js Weather API Example</title>
@@ -126,12 +136,13 @@ For this example, I&amp;rsquo;ll be using a static site made with Gatsby.</descr
     </item>
     
     <item>
-      <title>An Introduction To Using Gatsby Image</title>
-      <link>https://codebushi.com/using-gatsby-image/</link>
+      <title>Using Gatsby Image V1</title>
+      <link>https://codebushi.com/using-gatsby-image-version1/</link>
       <pubDate>Sun, 19 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://codebushi.com/using-gatsby-image/</guid>
-      <description>With the rise of mobile browsing, the optimization of images on a website is more important than ever. If a site is image heavy, it&amp;rsquo;s always a good idea to lazy load images that are further down the page to speed up the initial render. However, optimizing and implementing lazy loading images can be pretty time consuming. Gatsby-image is a React component that works with Gatsby.js to give you an easy way to load and optimize images on a website.</description>
+      <guid>https://codebushi.com/using-gatsby-image-version1/</guid>
+      <description>This demo is for Gatsby.js V1. For a newer demo that&amp;rsquo;s updated for Gatsby.js V2, please check out Using Gatsby Image V2.
+With the rise of mobile browsing, the optimization of images on a website is more important than ever. If a site is image heavy, it&amp;rsquo;s always a good idea to lazy load images that are further down the page to speed up the initial render. However, optimizing and implementing lazy loading images can be pretty time consuming.</description>
     </item>
     
     <item>

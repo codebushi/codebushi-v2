@@ -6,7 +6,7 @@
 
 <html amp lang="en-us" class="no-js">
 <head>
-    <title>An Introduction To Using Gatsby Image &amp; Gatsby.js V2</title>
+    <title>Using Gatsby Image V1</title>
     <meta charset="utf-8">
 
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
@@ -23,10 +23,10 @@
 
 
 
-    <link rel="canonical" href="https://codebushi.com/using-gatsby-image/">
+    <link rel="canonical" href="https://codebushi.com/using-gatsby-image-version1/">
     <link rel="icon" type="image/x-icon" href="https://codebushi.com/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <meta name="description" content="Updated to Gatsby.js V2! Gatsby-image is a React component that works with Gatsby.js to give you an easy way to load and optimize images on a website.">
+    <meta name="description" content="Gatsby-image is a React component that works with Gatsby.js to give you an easy way to load and optimize images on a website.">
 
     
 
@@ -85,8 +85,8 @@
         "@type": "ListItem",
         "position": 2,
         "item": {
-          "@id": "https://codebushi.com/using-gatsby-image/",
-          "name": "using-gatsby-image"
+          "@id": "https://codebushi.com/using-gatsby-image-version1/",
+          "name": "using-gatsby-image-version1"
         }
     }]
 }
@@ -99,19 +99,19 @@
   "author": {
     "name" : "Hunter Chang"
   },
-  "headline": "An Introduction To Using Gatsby Image &amp; Gatsby.js V2",
-  "description": "Updated to Gatsby.js V2! Gatsby-image is a React component that works with Gatsby.js to give you an easy way to load and optimize images on a website.",
-  "wordCount": 1322,
-  "datePublished" : "2018-09-20",
-  "dateModified" : "2018-09-20",
+  "headline": "Using Gatsby Image V1",
+  "description": "Gatsby-image is a React component that works with Gatsby.js to give you an easy way to load and optimize images on a website.",
+  "wordCount": 1054,
+  "datePublished" : "2017-11-19",
+  "dateModified" : "2017-11-19",
   "image" : {
       "@context": "http://schema.org",
       "@type": "ImageObject",
-      "url": "https://codebushi.com/amp/img/gatsby-image-v2.jpg",
+      "url": "https://codebushi.com/amp/img/gatsby-image.jpg",
       "height" : 503,
       "width" : 920
     },
-  "mainEntityOfPage" : "https://codebushi.com/using-gatsby-image/",
+  "mainEntityOfPage" : "https://codebushi.com/using-gatsby-image-version1/",
   "publisher" : {
     "@type": "Organization",
     "name" : "codebushi.com",
@@ -144,153 +144,100 @@
 
 
 <main>
-    <h1>An Introduction To Using Gatsby Image &amp; Gatsby.js V2</h1>
+    <h1>Using Gatsby Image V1</h1>
     <div>
-        <p><small>September 20, 2018</small></p>
+        <p><small>November 19, 2017</small></p>
     </div>
     <div>
-        <p><amp-img src="https://codebushi.com/amp/img/gatsby-image-v2.jpg" alt="" layout="responsive" width="920" height="503"></amp-img></p>
+        <p><amp-img src="https://codebushi.com/amp/img/gatsby-image.jpg" alt="" layout="responsive" width="920" height="503"></amp-img></p>
     </div>
     <div>
-        <p><em>This post has been updated for Gatsby.js V2. If you are on V1, here is an <a href="/using-gatsby-image-version1">older article</a> for legacy users.</em></p>
+        <p><strong>This demo is for Gatsby.js V1.</strong> For a newer demo that&rsquo;s updated for Gatsby.js V2, please check out <a href="/using-gatsby-image/">Using Gatsby Image V2</a>.</p>
 
-<p><a href="https://www.gatsbyjs.org/blog/2018-09-17-gatsby-v2/" target="blank">Gatsby.js V2</a> was recently launched and there have been a few small changes to how <a href="https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-image" target="blank">Gatsby Image</a> is implemented. Gatsby Image is a React component that makes it easy to optimize all the images on your website. It will resize images for you, so you don&rsquo;t load huge images on a mobile device, and it will also lazy load your images with a cool &ldquo;blur-up&rdquo; effect so that your initial page loads are blazing fast. If you&rsquo;re new to Gatsby, I highly recommend going through their <a href="https://www.gatsbyjs.org/tutorial/" target="blank">official tutorial</a> first and familiarize yourself with how Gatsby works.</p>
+<p>With the rise of mobile browsing, the optimization of images on a website is more important than ever. If a site is image heavy, it&rsquo;s always a good idea to lazy load images that are further down the page to speed up the initial render. However, optimizing and implementing lazy loading images can be pretty time consuming. <a href="https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-image">Gatsby-image</a> is a React component that works with Gatsby.js to give you an easy way to load and optimize images on a website.</p>
 
-<p>Adding Gatsby Image to your static website can be a bit tricky, especially since Gatsby uses GraphQL to query and load your images before they can be used. Here&rsquo;s a breakdown of the steps needed:</p>
+<p>If you haven&rsquo;t already, go through the official <a href="https://www.gatsbyjs.org/tutorial/">Gatsby.js tutorial</a> first, you&rsquo;ll need to know some of the basics of Gatsby and GraphQL before we get started. Here is a demo of what we&rsquo;ll be building:</p>
 
-<p>1) Install the required npm packages and configure your <code>gatsby-config.js</code> settings.</p>
+<h4 class="mt-4 mb-4"><a href="http://hc-gatsby-image-demo.surge.sh/">Gatsby Image Demo</a> <small>( <a href="https://github.com/ChangoMan/gatsby-image-demo">view source</a> )</small></h4>
 
-<p>2) Test that you can query for your images using GraphQL.</p>
+<p>Let&rsquo;s start off by installing and running the <a href="https://github.com/gatsbyjs/gatsby-starter-blog">gatsby-starter-blog</a>:</p>
 
-<p>3) Choose which image type you will need, fixed or fluid, and add the query to your page.</p>
-
-<p>4) Use Gatsby Image <code>&lt;Img&gt;</code> tags on your page.</p>
-
-<p>Here&rsquo;s a demo of the final product:</p>
-
-<h4 class="mt-4 mb-4"><a href="https://gatsby-image-v2.surge.sh/">Gatsby Image Demo</a> <small>( <a href="https://github.com/codebushi/gatsby-image-v2">view source</a> )</small></h4>
-
-<h3 class="mt-5 mb-3">Installing & Configuring Gatsby Image</h3>
-
-<p>We&rsquo;ll start off by installing the <a href="https://github.com/gatsbyjs/gatsby-starter-default" target="blank">default Gatsby Starter</a>. You can clone the repo or use the Gatsby CLI to install the starter.</p>
-
-<pre><code class="language-bash">gatsby new image-demo https://github.com/gatsbyjs/gatsby-starter-default
-cd image-demo/
+<pre><code class="language-bash">gatsby new gatsby-image-demo https://github.com/gatsbyjs/gatsby-starter-blog
+cd gatsby-image-demo
+gatsby develop
 </code></pre>
 
-<p>If you used the CLI, you&rsquo;ll need to continue with <code>yarn</code> since the initial packages were installed with <code>yarn</code> and there will be a yarn.lock file. If you cloned the repo and used <code>npm install</code>, then continue to use <code>npm</code> so you don&rsquo;t mix the package installers. I&rsquo;ll be using <code>yarn</code> for the rest of this demo.</p>
+<p>Go to <code>http://localhost:8000/</code> and you&rsquo;ll see something <a href="http://gatsbyjs.github.io/gatsby-starter-blog/">like this</a>. We can now add some images to this starter blog!</p>
 
-<p>Install Gatsby Image</p>
+<p>Let&rsquo;s make a new directory for our cool new images. From the root folder of the project:</p>
+
+<pre><code class="language-bash">cd src/
+mkdir images
+</code></pre>
+
+<p>One of my go-to websites for free stock images is <a href="https://unsplash.com/">https://unsplash.com/</a>. Just download a few images and save them into the new <code>src/images</code> folder. I&rsquo;m going to save them as one.jpg, two.jpg, and three.jpg for ease of reference.</p>
+
+<p>Going back to the terminal, let&rsquo;s stop the <code>gatsby develop</code> and add the <code>gatsby-image</code> package:</p>
 
 <pre><code class="language-bash">yarn add gatsby-image
 </code></pre>
 
-<p>We&rsquo;ll also need three other packages, <a href="https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-transformer-sharp">gatsby-transformer-sharp</a>, <a href="https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-plugin-sharp">gatsby-plugin-sharp</a>, and <a href="https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-filesystem">gatsby-source-filesystem</a>. If you are not using the default starter and already have these packages installed, you can skip this step.</p>
+<p>If you didn&rsquo;t use the gatsby-starter-blog mentioned above, you may need to include <code>gatsby-transformer-sharp</code> and <code>gatsby-plugin-sharp</code> as well, and make sure they are installed and included in your gatsby-config.</p>
 
-<pre><code class="language-bash">yarn add gatsby-transformer-sharp gatsby-plugin-sharp gatsby-source-filesystem
-</code></pre>
+<h3 class="mt-5 mb-3">Adding your images folder to gatsby-config.js</h3>
 
-<p>The <code>gatsby-source-filesystem</code> package allows Gatsby to use GraphQL on the images in a certain directory and make queries out of them. The two <code>sharp</code> plugins are what processes the images before you display them.</p>
+<p>Now open up <code>gatsby-config.js</code>. Since <code>gatsby-image</code> is a React component, we don&rsquo;t need to add it to the config file. However, we do need to set up our <code>src/images</code> folder using <code>gatsby-source-filesystem</code> so we can use GraphQL to query our images. Look for this object in the config file, in the plugins array:</p>
 
-<p>Open up your <code>gatsby-config.js</code> and add the plugins to it. I&rsquo;ll add them right before the existing plugins. Your file should look like this:</p>
-
-<pre><code class="language-javascript">module.exports = {
-  siteMetadata: {
-    title: 'Gatsby Default Starter',
+<pre><code class="language-javascript">{
+  resolve: `gatsby-source-filesystem`,
+  options: {
+    path: `${__dirname}/src/pages`,
+    name: 'pages',
   },
-  plugins: [
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/images`,
-        name: 'images',
-      },
-    },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
-    'gatsby-plugin-react-helmet',
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
-        start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
-        display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
-      },
-    },
-    'gatsby-plugin-offline',
-  ],
-}
-
+},
 </code></pre>
 
-<p><strong>Important:</strong> Make sure you specify the correct <code>path</code> to your images! The <code>gatsby-source-filesystem</code> will look in this folder to access your images. Since we&rsquo;re using the default starter, there&rsquo;s already a folder at <code>/src/images</code> so we&rsquo;ll use that. Get some images off of <a href="https://unsplash.com/" target="blank">Unsplash</a> and add them to that folder.</p>
+<p>This is telling Gatsby to look in the <code>/src/pages</code> directory for some files, and make &ldquo;nodes&rdquo; out of them. These nodes are needed when making the GraphQL queries for the site. This <code>/src/pages</code> directory is where all the current pages and posts are kept. We will add our images directory right under this object and change the <code>path</code> and <code>name</code> options. Your <code>gatsby-config.js</code> should now have this:</p>
 
-<h3 class="mt-5 mb-3">Testing An Image Query With GraphQL</h3>
-
-<p>With the plugins installed, we can fire up our site in dev mode.</p>
-
-<pre><code class="language-bash">gatsby develop
+<pre><code class="language-javascript">{
+  resolve: `gatsby-source-filesystem`,
+  options: {
+    path: `${__dirname}/src/pages`,
+    name: 'pages',
+  },
+},
+{
+  resolve: `gatsby-source-filesystem`,
+  options: {
+    path: `${__dirname}/src/images`,
+    name: 'images',
+  },
+},
+...
 </code></pre>
 
-<p>Navigate to <code>http://localhost:8000/</code> to see your site in dev mode. Now we&rsquo;ll play with the GraphiQL interface to understand how the image query works. Head to <code>http://localhost:8000/___graphql</code> to see the GraphiQL view of the site. Here we can test the different queries available to us. I&rsquo;ve added 3 images to my <code>/src/images</code> folder and named them <code>one.jpg</code> <code>two.jpg</code> and <code>three.jpg</code>. To query for <code>one.jpg</code> I&rsquo;ll use this:</p>
+<h3 class="mt-5 mb-3">Back into Gatsby</h3>
 
-<pre><code class="language-graphql">query {
-  imageOne: file(relativePath: {eq: &quot;one.jpg&quot;}) {
-    childImageSharp {
-      fluid(maxWidth: 1000) {
-        base64
-        tracedSVG
-        aspectRatio
-        src
-        srcSet
-        srcWebp
-        srcSetWebp
-        sizes
-        originalImg
-        originalName
+<p>Let&rsquo;s start up Gatsby again by running <code>gatsby develop</code>. The site should look the same as before, but now we can query our new stock images. Open up <code>/src/pages/index.js</code> which is the component for the homepage. Scroll to the bottom and you&rsquo;ll see the GraphQL query that&rsquo;s currently being used:</p>
+
+<pre><code class="language-javascript">export const pageQuery = graphql`
+  query IndexQuery {
+    site {
+      siteMetadata {
+        title
       }
     }
-  }
-}
-</code></pre>
-
-<p>If you hit the play button, you should see data in the response column. This proves that Gatsby is able to find your image and process it.</p>
-
-<p><amp-img src="../img/gatsby-image-query.png" alt="Gatsby Image Query" layout="responsive" width="1160" height="467"></amp-img></p>
-
-<p>Try changing <code>file(relativePath: {eq: &quot;one.jpg&quot;})</code> to the other images in that folder, and make sure you see the data return.</p>
-
-<h3 class="mt-5 mb-3">Adding The GraphQL Query</h3>
-
-<p>We can now copy this query and use it in our homepage component. Open up <code>src/pages/index.js</code>. You&rsquo;ll need to import <code>graphql</code> from <code>'gatsby'</code> as well as <code>Img</code> from <code>'gatsby-image'</code>. We&rsquo;ll add the query to the page, the final result looks like this:</p>
-
-<pre><code class="language-jsx">import React from 'react'
-import { Link, graphql } from 'gatsby'
-import Img from 'gatsby-image'
-
-import Layout from '../components/layout'
-
-const IndexPage = (props) =&gt; (
-  &lt;Layout&gt;
-    &lt;h1&gt;Hi people&lt;/h1&gt;
-    &lt;p&gt;Welcome to your new Gatsby site.&lt;/p&gt;
-    &lt;p&gt;Now go build something great.&lt;/p&gt;
-    &lt;Link to=&quot;/page-2/&quot;&gt;Go to page 2&lt;/Link&gt;
-  &lt;/Layout&gt;
-)
-
-export default IndexPage
-
-export const pageQuery = graphql`
-  query {
-    imageOne: file(relativePath: { eq: &quot;one.jpg&quot; }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: &quot;DD MMMM, YYYY&quot;)
+            title
+          }
         }
       }
     }
@@ -298,86 +245,146 @@ export const pageQuery = graphql`
 `
 </code></pre>
 
-<p>The query looks a bit different than before, we&rsquo;ve removed all the fields inside <code>fluid(maxWidth: 1000) {}</code> and used <code>...GatsbyImageSharpFluid</code>, which is a &ldquo;query fragment&rdquo;. Due to some limitations, we were not able to play with <code>...GatsbyImageSharpFluid</code> before in GraphiQL, but we can add it here. You can read more about the different fragments on the <a href="https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-image" target="">Gatsby Image Readme</a>.</p>
+<p>This query is currently getting the site&rsquo;s title from the <code>siteMetadata</code>, as well as all the posts from <code>allMarkdownRemark</code>. We&rsquo;ll need to add a query right below <code>allMarkdownRemark</code> for our image <code>one.jpg</code>. The query now looks like this:</p>
 
-<p><strong>Important:</strong> Notice how the <code>file(relativePath: { eq: &quot;one.jpg&quot; })</code> part remains the same, this is because the <code>relativePath</code> is not relative to <code>index.js</code> but rather the folder you specified earlier in <code>gatsby-config.js</code> and the <code>gatsby-source-filesystem</code>. There is no need to change anything about the <code>relativePath</code>.</p>
-
-<p>Gatsby Image has two types of responsive images, <code>fixed</code> and <code>fluid</code>. This distinction will vary what your query looks like. A <code>fixed</code> query has a set width and height and is for supporting different <em>screen resolutions</em>. A <code>fluid</code> query has a max-width and sometimes a max-height, and will create multiple images for supporting different <em>screen sizes</em>. For the most part, I find myself using the <code>fluid</code> type since my images will vary depending on the size of the screen. If you want to use the <code>fixed</code> type or wish to learn more about the two, check out the <a href="https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-image" target="">Readme</a>.</p>
-
-<h3 class="mt-5 mb-3">Using The Gatsby Image Component</h3>
-
-<p>So we have our query on the page, the GraphQL data can be accessed via <code>props</code> in our <code>IndexPage</code> component. The full path to the data is <code>props.data.imageOne.childImageSharp.fluid</code>. We can pass this into the <code>&lt;Img&gt;</code> component like so:</p>
-
-<pre><code class="language-jsx">&lt;Img fluid={props.data.imageOne.childImageSharp.fluid} /&gt;
-</code></pre>
-
-<p>You can destructure this however you like, I&rsquo;m using the full path for clarity. The image should now be displaying on your dev site! To get all three images, just copy and paste the <code>imageOne</code> blocks and rename to <code>imageTwo</code> and <code>imageThree</code>. You can call these whatever you want, just make sure it matches whatever you pass into the <code>&lt;Img /&gt;</code> component.</p>
-
-<pre><code class="language-graphql">query {
-  imageOne: file(relativePath: { eq: &quot;one.jpg&quot; }) {
-    childImageSharp {
-      fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
+<pre><code class="language-javascript">export const pageQuery = graphql`
+  query IndexQuery {
+    site {
+      siteMetadata {
+        title
       }
     }
-  }
-  imageTwo: file(relativePath: { eq: &quot;two.jpg&quot; }) {
-    childImageSharp {
-      fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: &quot;DD MMMM, YYYY&quot;)
+            title
+          }
+        }
       }
     }
-  }
-  imageThree: file(relativePath: { eq: &quot;three.jpg&quot; }) {
-    childImageSharp {
-      fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
+    imageOne: imageSharp(id: { regex: &quot;/one.jpg/&quot; }) {
+      sizes(maxWidth: 630) {
+        ...GatsbyImageSharpSizes
       }
-    }
-  }
-}
-</code></pre>
-
-<p>The components would look like this:</p>
-
-<pre><code class="language-jsx">&lt;Img fluid={props.data.imageOne.childImageSharp.fluid} /&gt;
-&lt;Img fluid={props.data.imageTwo.childImageSharp.fluid} /&gt;
-&lt;Img fluid={props.data.imageThree.childImageSharp.fluid} /&gt;
-</code></pre>
-
-<p>We&rsquo;re repeating a lot of the same stuff inside that query, it can be cleaned up by making a custom fragment. Pull out the <code>childImageSharp</code> blocks and make a new fragment like so:</p>
-
-<pre><code class="language-jsx">export const fluidImage = graphql`
-fragment fluidImage on File {
-  childImageSharp {
-    fluid(maxWidth: 1000) {
-      ...GatsbyImageSharpFluid
-    }
-  }
-}
-`;
-</code></pre>
-
-<p>We can then replace the repeating code with this new fragment like so:</p>
-
-<pre><code class="language-jsx">export const pageQuery = graphql`
-  query {
-    imageOne: file(relativePath: { eq: &quot;one.jpg&quot; }) {
-      ...fluidImage
-    }
-    imageTwo: file(relativePath: { eq: &quot;two.jpg&quot; }) {
-      ...fluidImage
-    }
-    imageThree: file(relativePath: { eq: &quot;three.jpg&quot; }) {
-      ...fluidImage
     }
   }
 `
 </code></pre>
 
-<p>We&rsquo;ll now have all three images on our homepage! You can play around with the different Gatsby fragments for different loading effects. <code>...GatsbyImageSharpFluid</code> will give the &ldquo;blur up&rdquo; effect, try <code>...GatsbyImageSharpFluid_tracedSVG</code> for a different effect and experiment with fixed images.</p>
+<p><code>imageOne</code> will be a new object that&rsquo;s added to <code>this.props.data</code>. Since we are going to put this in the main container of the page, and it will be fluid on mobile, I&rsquo;m querying for the child object called <code>sizes</code> with a maxWidth of the container size, which is 630px. There&rsquo;s another image type you can query for, called <code>resolutions</code> if you know the exact width and height of the image. Check out the <a href="https://www.gatsbyjs.org/packages/gatsby-image/">gatsby-image docs</a> for a more detailed explanation on these image types.</p>
 
-<h4 class="mt-4 mb-4"><a href="https://gatsby-image-v2.surge.sh/">Gatsby Image Demo</a> <small>( <a href="https://github.com/codebushi/gatsby-image-v2">view source</a> )</small></h4>
+<p>Now our <code>one.jpg</code> should be ready to rock and roll. We can take a look at the data for this image by doing a <code>console.log(this.props.data)</code> inside the <code>render()</code> function, and you should see something like this:</p>
+
+<p><a href="https://i.imgur.com/8bRktxJ.png">https://i.imgur.com/8bRktxJ.png</a></p>
+
+<h3 class="mt-5 mb-3">Importing the gatsby-image component</h3>
+
+<p>Going back up to the top of the page, let&rsquo;s import the <code>gatsby-image</code> component:</p>
+
+<pre><code class="language-jsx">...
+import Img from 'gatsby-image'
+
+class BlogIndex extends React.Component {
+...
+</code></pre>
+
+<p>And add the new component right below the existing <code>&lt;Bio /&gt;</code> component:</p>
+
+<pre><code class="language-jsx">...
+&lt;Bio /&gt;
+
+&lt;Img sizes={this.props.data.imageOne.sizes} /&gt;
+
+{posts.map(({ node }) =&gt; {
+...
+</code></pre>
+
+<p>Your shiny new image should show up on the site now, with all optimizations in place! We can now add the other two images to our query, and add them to the page. Our full query now looks like:</p>
+
+<pre><code class="language-javascript">export const pageQuery = graphql`
+  query IndexQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: &quot;DD MMMM, YYYY&quot;)
+            title
+          }
+        }
+      }
+    }
+    imageOne: imageSharp(id: { regex: &quot;/one.jpg/&quot; }) {
+      sizes(maxWidth: 630) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    imageTwo: imageSharp(id: { regex: &quot;/two.jpg/&quot; }) {
+      sizes(maxWidth: 630) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    imageThree: imageSharp(id: { regex: &quot;/three.jpg/&quot; }) {
+      sizes(maxWidth: 630) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  }
+`
+</code></pre>
+
+<p>And up in our <code>render()</code> method:</p>
+
+<pre><code class="language-jsx">return (
+  &lt;div&gt;
+    &lt;Helmet title={siteTitle} /&gt;
+    &lt;Bio /&gt;
+
+    &lt;Img sizes={this.props.data.imageOne.sizes} /&gt;
+
+    {posts.map(({ node }) =&gt; {
+      const title = get(node, 'frontmatter.title') || node.fields.slug
+      return (
+        &lt;div key={node.fields.slug}&gt;
+          &lt;h3
+            style={{
+              marginBottom: rhythm(1 / 4),
+            }}
+          &gt;
+            &lt;Link style={{ boxShadow: 'none' }} to={node.fields.slug}&gt;
+              {title}
+            &lt;/Link&gt;
+          &lt;/h3&gt;
+          &lt;small&gt;{node.frontmatter.date}&lt;/small&gt;
+          &lt;p dangerouslySetInnerHTML={{ __html: node.excerpt }} /&gt;
+        &lt;/div&gt;
+      )
+    })}
+
+    &lt;Img sizes={this.props.data.imageTwo.sizes} /&gt;
+    &lt;Img sizes={this.props.data.imageThree.sizes} /&gt;
+
+  &lt;/div&gt;
+)
+</code></pre>
+
+<p>If you reload the page, you should see an added &ldquo;blur up&rdquo; effect that comes built in with <code>gatsby-image</code> which loads a blurry placeholder image before the real one loads. Scroll down the page to see <code>imageTwo</code> and <code>imageThree</code> lazy load in!</p>
+
+<h4><a href="http://hc-gatsby-image-demo.surge.sh/">Finished Product</a> <small>( <a href="https://github.com/ChangoMan/gatsby-image-demo">view source</a> )</small></h4>
 
     </div>
 </main>
