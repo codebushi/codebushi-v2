@@ -59,7 +59,7 @@ module.exports = {
         short_name: `Code Bushi`,
         start_url: `/`,
         background_color: `#0f1621`,
-        theme_color: `#f72060`,
+        theme_color: `#0f1621`,
         display: `minimal-ui`,
         icon: `src/assets/img/website-icon.png`,
       },
