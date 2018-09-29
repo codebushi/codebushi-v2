@@ -1,9 +1,10 @@
 ---
-title: Form Handling with Gatsby.js and Netlify
+title: Form Handling with Gatsby.js V2 and Netlify
 date: "2018-03-25"
+dateModified: "2018-09-29"
 path: "/form-handling-gatsby-netlify/"
 image: "./img/gatsby-forms.jpg"
-description: "Easily handle forms for your Gatsby.js static website with Netlify. Works with most static site generators."
+description: "Easily handle forms for your Gatsby.js V2 static website with Netlify. Works with most static site generators."
 featured: true
 tags: ["blog"]
 ---
@@ -18,7 +19,7 @@ Assuming you have Gatsby.js installed on your machine, let's start off by clonin
 
 ```bash
 # Create a new Gatsby site with the Forty starter
-gatsby new gatsby-forms https://github.com/ChangoMan/gatsby-starter-forty
+gatsby new gatsby-forms https://github.com/codebushi/gatsby-starter-forty-v2
 
 # Go into the new directory
 cd gatsby-forms/
@@ -78,11 +79,12 @@ Adding your own success page is pretty straightforward, we'll first need to crea
 ```jsx
 import React from 'react'
 import Helmet from 'react-helmet'
+import Layout from '../components/layout'
 
 import pic11 from '../assets/images/pic11.jpg'
 
 const Success = (props) => (
-    <div>
+    <Layout>
         <Helmet>
             <title>Success Page</title>
             <meta name="description" content="Success Page" />
@@ -99,8 +101,7 @@ const Success = (props) => (
                 </div>
             </section>
         </div>
-
-    </div>
+    </Layout>
 )
 
 export default Success
