@@ -19,7 +19,7 @@ Assuming you have Gatsby.js installed on your machine, let's start off by clonin
 
 ```bash
 # Create a new Gatsby site with the Forty starter
-gatsby new gatsby-forms https://github.com/codebushi/gatsby-starter-forty-v2
+gatsby new gatsby-forms https://github.com/codebushi/gatsby-starter-forty
 
 # Go into the new directory
 cd gatsby-forms/
