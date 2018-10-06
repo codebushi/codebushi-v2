@@ -19,6 +19,7 @@ const Footer = (props) => (
                 </div>
                 <div className="col-md-6 text-center text-lg-right">
                     <p className="mt-md-3">
+                        <a href="https://twitter.com/HuntaroSan" title="Code Bushi's Twitter" className="social-icon-link u-link-white" target="blank"><span className="fi-twitter-circled"></span></a>
                         <a href="https://github.com/codebushi" title="Code Bushi's Github" className="social-icon-link u-link-white" target="blank"><span className="fi-social-github"></span></a>
                     </p>
                 </div>
