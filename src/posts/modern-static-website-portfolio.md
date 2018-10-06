@@ -92,7 +92,7 @@ To install Gatsby, you'll first need to have [Node.js](https://nodejs.org/en/dow
 npm install --global gatsby-cli
 
 # Creates a new Gatsby site, using the Dimension starter
-gatsby new gatsby-site https://github.com/ChangoMan/gatsby-starter-dimension
+gatsby new gatsby-site https://github.com/codebushi/gatsby-starter-dimension
 
 # Move into your new directory
 cd gatsby-site
