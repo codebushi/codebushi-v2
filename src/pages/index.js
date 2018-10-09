@@ -108,6 +108,23 @@ class BlogIndex extends React.Component {
 
                 <section className="section py-6">
                     <div className="container">
+                        <div className="row align-items-center">
+                            <div className="col-lg-6">
+                                <div className="py-4 text-center">
+                                    <h3 className="mb-4">Dev Humor Swag &amp; Stickers</h3>
+                                    <p className="mb-4">Check out the Swag page for some fun programmer humor stickers and swag.</p>
+                                    <p><Link to="/swag/" className="btn btn-outline-secondary">Swag &amp; Stickers</Link></p>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <Img fluid={this.props.data.jsSeinfeld.childImageSharp.fluid} />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="section section--shaded py-6">
+                    <div className="container">
                         <h2 className="mb-4">About Code Bushi</h2>
                         <p className="lead">Code Bushi aims to provide web development resources, techniques, and trends to help guide your coding journey. Modern web development is constantly changing and it can be a struggle trying to keep up with the latest standards and best practices. With Code Bushi, I hope to highlight some interesting tools and resources for the modern web.</p>
                         <p className="lead">Code Bushi was started by me, <Link to="/about">Hunter Chang</Link>, as a way to document and share my coding experiences. I've been a professional web developer and designer for over 8 years and I still love discovering and creating cool things on the web.</p>
@@ -163,6 +180,13 @@ export const pageQuery = graphql`
         bannerImage:file(relativePath: { eq: "bg-banner-home-min.jpg" }) {
             childImageSharp {
                 fluid(maxWidth: 1920) {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
+        jsSeinfeld:file(relativePath: { eq: "js-seinfeld.png" }) {
+            childImageSharp {
+                fluid(maxWidth: 690) {
                     ...GatsbyImageSharpFluid
                 }
             }
