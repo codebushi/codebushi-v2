@@ -52,7 +52,7 @@ class NextjsStarters extends React.Component {
                 <section className="section section--shaded py-5 text-center">
                     <div className="container">
                         <p className="lead mb-0">New to Next.js? Check out the <a href="#getStarted">Getting Started</a> guide for a quick overview.</p>
-                        <p className="lead mb-0">Visit the <Link to="/swag/">Swag Page</Link> for some fun Dev Humor stickers.</p>
+                        {/*<p className="lead mb-0">Visit the <Link to="/swag/">Swag Page</Link> for some fun Dev Humor stickers.</p>*/}
                         <p className="lead mb-0">Here's also some great resources for <Link to="/learning-javascript-and-react/">learning JavaScript and React.js.</Link></p>
                     </div>
                 </section>

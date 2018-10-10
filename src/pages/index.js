@@ -106,7 +106,7 @@ class BlogIndex extends React.Component {
                     </div>
                 </section>
 
-                <section className="section py-6">
+                {/*<section className="section py-6">
                     <div className="container">
                         <div className="row align-items-center">
                             <div className="col-lg-6">
@@ -121,9 +121,9 @@ class BlogIndex extends React.Component {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section>*/}
 
-                <section className="section section--shaded py-6">
+                <section className="section py-6">
                     <div className="container">
                         <h2 className="mb-4">About Code Bushi</h2>
                         <p className="lead">Code Bushi aims to provide web development resources, techniques, and trends to help guide your coding journey. Modern web development is constantly changing and it can be a struggle trying to keep up with the latest standards and best practices. With Code Bushi, I hope to highlight some interesting tools and resources for the modern web.</p>
