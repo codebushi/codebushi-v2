@@ -106,24 +106,24 @@ class BlogIndex extends React.Component {
                     </div>
                 </section>
 
-                {/*<section className="section py-6">
+                <section className="section py-6">
                     <div className="container">
                         <div className="row align-items-center">
                             <div className="col-lg-6">
                                 <div className="py-4 text-center">
                                     <h3 className="mb-4">Dev Humor Swag &amp; Stickers</h3>
-                                    <p className="mb-4">Check out the Swag page for some fun programmer humor stickers and swag.</p>
-                                    <p><Link to="/swag/" className="btn btn-outline-secondary">Swag &amp; Stickers</Link></p>
+                                    <p className="mb-4">Check out the Swag page for some fun programmer humor and developer designs you can buy.</p>
+                                    <p><Link to="/swag/" className="btn btn-outline-primary">Swag and Stickers</Link></p>
                                 </div>
                             </div>
                             <div className="col-lg-6">
-                                <Img fluid={this.props.data.jsSeinfeld.childImageSharp.fluid} />
+                                <Img fluid={this.props.data.swagDisplay.childImageSharp.fluid} />
                             </div>
                         </div>
                     </div>
-                </section>*/}
+                </section>
 
-                <section className="section py-6">
+                <section className="section section--shaded py-6">
                     <div className="container">
                         <h2 className="mb-4">About Code Bushi</h2>
                         <p className="lead">Code Bushi aims to provide web development resources, techniques, and trends to help guide your coding journey. Modern web development is constantly changing and it can be a struggle trying to keep up with the latest standards and best practices. With Code Bushi, I hope to highlight some interesting tools and resources for the modern web.</p>
@@ -184,9 +184,9 @@ export const pageQuery = graphql`
                 }
             }
         }
-        jsSeinfeld:file(relativePath: { eq: "js-seinfeld.png" }) {
+        swagDisplay:file(relativePath: { eq: "swag-display.png" }) {
             childImageSharp {
-                fluid(maxWidth: 690) {
+                fluid(maxWidth: 593) {
                     ...GatsbyImageSharpFluid
                 }
             }

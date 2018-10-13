@@ -52,7 +52,7 @@ class NextjsStarters extends React.Component {
                 <section className="section section--shaded py-5 text-center">
                     <div className="container">
                         <p className="lead mb-0">New to Next.js? Check out the <a href="#getStarted">Getting Started</a> guide for a quick overview.</p>
-                        {/*<p className="lead mb-0">Visit the <Link to="/swag/">Swag Page</Link> for some fun Dev Humor stickers.</p>*/}
+                        {<p className="lead mb-0">Visit the <Link to="/swag/">Swag Page</Link> for some fun Dev Humor stickers.</p>}
                         <p className="lead mb-0">Here's also some great resources for <Link to="/learning-javascript-and-react/">learning JavaScript and React.js.</Link></p>
                     </div>
                 </section>
@@ -93,11 +93,18 @@ class NextjsStarters extends React.Component {
                     </div>
                 </div>
 
-                <div className="container-fluid newsletter text-center" style={{padding: '40px 20px'}}>
+                <div className="section--shaded" style={{padding: '60px 20px'}}>
                     <div className="container">
-                        <p className="lead">Sign up and receive an email alert when the next Next.js Starter is released!</p>
-                        <SubscribeForm {...formProps}/>
-                        <p className="mt-2 mb-0"><small><em>Your email will never be shared or used for spam!</em></small></p>
+                        <div className="row align-items-center">
+                            <div className="col-md-6 text-center text-md-left">
+                                <h2>Stickers and Swag</h2>
+                                <p className="mb-4">Do you like rad JavaScript stickers and swag? Check out the Swag page where I'm selling some of my developer themed designs!</p>
+                                <p className="mb-4"><Link className="btn btn-outline-primary" to="/swag/">Swag and Stickers</Link></p>
+                            </div>
+                            <div className="col-md-6 text-center">
+                                <Img fluid={this.props.data.swagDisplay.childImageSharp.fluid} />
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -139,6 +146,14 @@ class NextjsStarters extends React.Component {
                     </div>
                 </section>
 
+                <div className="container-fluid newsletter text-center" style={{padding: '40px 20px'}}>
+                    <div className="container">
+                        <p className="lead">Sign up and receive an email alert when the next Next.js Starter is released!</p>
+                        <SubscribeForm {...formProps}/>
+                        <p className="mt-2 mb-0"><small><em>Your email will never be shared or used for spam!</em></small></p>
+                    </div>
+                </div>
+
             </Layout>
         )
     }
@@ -158,6 +173,13 @@ export const pageQuery = graphql`
         gatsbyForty:file(relativePath: { eq: "template-gatsby-forty.jpg" }) {
             childImageSharp {
                 fluid(maxWidth: 1200) {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
+        swagDisplay:file(relativePath: { eq: "swag-display.png" }) {
+            childImageSharp {
+                fluid(maxWidth: 593) {
                     ...GatsbyImageSharpFluid
                 }
             }
