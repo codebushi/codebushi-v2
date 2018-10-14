@@ -48,8 +48,8 @@ class SwagPage extends React.Component {
                             <div className="col-lg-6">
                                 <p>JAM STACK Rock N' Roll Design</p>
                                 <p>
-                                    <a className="btn btn-sm btn-primary mx-1" href="https://www.teepublic.com/sticker/3318095-jam-stack-rock-n-roll-design" target="blank">Stickers</a>
-                                    <a className="btn btn-sm btn-primary mx-1" href="https://www.teepublic.com/t-shirt/3318095-jam-stack-rock-n-roll-design" target="blank">Shirts</a>
+                                    <a className="btn btn-sm btn-primary mx-1" href="https://www.redbubble.com/people/techtrade/works/34472993-jam-stack-rocker-design?asc=u&p=sticker" target="blank">Stickers</a>
+                                    <a className="btn btn-sm btn-primary mx-1" href="https://www.redbubble.com/people/techtrade/works/34472993-jam-stack-rocker-design?asc=u&p=t-shirt" target="blank">Shirts</a>
                                 </p>
                             </div>
                         </div>
@@ -69,15 +69,15 @@ class SwagPage extends React.Component {
                             <div className="col-lg-6">
                                 <p>JavaScript Power Magazine Design</p>
                                 <p>
-                                    <a className="btn btn-sm btn-primary mx-1" href="https://www.teepublic.com/sticker/3318129-javascript-power-retro-design" target="blank">Stickers</a>
-                                    <a className="btn btn-sm btn-primary mx-1" href="https://www.teepublic.com/t-shirt/3318129-javascript-power-retro-design" target="blank">Shirts</a>
+                                    <a className="btn btn-sm btn-primary mx-1" href="https://www.redbubble.com/people/techtrade/works/34444816-javascript-power?asc=u&p=sticker" target="blank">Stickers</a>
+                                    <a className="btn btn-sm btn-primary mx-1" href="https://www.redbubble.com/people/techtrade/works/34444816-javascript-power?asc=u&p=t-shirt" target="blank">Shirts</a>
                                 </p>
                             </div>
                             <div className="col-lg-6">
                                 <p>JavaScript And Chill</p>
                                 <p>
-                                    <a className="btn btn-sm btn-primary mx-1" href="https://www.teepublic.com/t-shirt/3318140-javascript-and-chill" target="blank">Stickers</a>
-                                    <a className="btn btn-sm btn-primary mx-1" href="https://www.teepublic.com/sticker/3318140-javascript-and-chill" target="blank">Shirts</a>
+                                    <a className="btn btn-sm btn-primary mx-1" href="https://www.redbubble.com/people/techtrade/works/34408342-javascript-and-chill?asc=u&p=sticker" target="blank">Stickers</a>
+                                    <a className="btn btn-sm btn-primary mx-1" href="https://www.redbubble.com/people/techtrade/works/34408342-javascript-and-chill?asc=u&p=t-shirt" target="blank">Shirts</a>
                                 </p>
                             </div>
                         </div>
