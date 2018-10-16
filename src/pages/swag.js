@@ -42,14 +42,14 @@ class SwagPage extends React.Component {
                                 <p>Retro TV JavaScript Design</p>
                                 <p>
                                     <a className="btn btn-sm btn-primary mx-1" href="https://www.teepublic.com/sticker/3317976-javascript-retro-design" target="blank">Stickers</a>
-                                    <a className="btn btn-sm btn-primary mx-1" href="https://www.teepublic.com/t-shirt/3317976-javascript-retro-design" target="blank">Shirts</a>
+                                    <a className="btn btn-sm btn-primary mx-1" href="https://www.amazon.com/dp/B07JFVDFF2" target="blank">Shirts</a>
                                 </p>
                             </div>
                             <div className="col-lg-6">
                                 <p>JAM STACK Rock N' Roll Design</p>
                                 <p>
                                     <a className="btn btn-sm btn-primary mx-1" href="https://www.redbubble.com/people/techtrade/works/34472993-jam-stack-rocker-design?asc=u&p=sticker" target="blank">Stickers</a>
-                                    <a className="btn btn-sm btn-primary mx-1" href="https://www.redbubble.com/people/techtrade/works/34472993-jam-stack-rocker-design?asc=u&p=t-shirt" target="blank">Shirts</a>
+                                    <a className="btn btn-sm btn-primary mx-1" href="https://www.amazon.com/dp/B07JGDYVD7" target="blank">Shirts</a>
                                 </p>
                             </div>
                         </div>
@@ -70,7 +70,7 @@ class SwagPage extends React.Component {
                                 <p>JavaScript Power Magazine Design</p>
                                 <p>
                                     <a className="btn btn-sm btn-primary mx-1" href="https://www.redbubble.com/people/techtrade/works/34444816-javascript-power?asc=u&p=sticker" target="blank">Stickers</a>
-                                    <a className="btn btn-sm btn-primary mx-1" href="https://www.redbubble.com/people/techtrade/works/34444816-javascript-power?asc=u&p=t-shirt" target="blank">Shirts</a>
+                                    <a className="btn btn-sm btn-primary mx-1" href="https://www.amazon.com/dp/B07JGDPQFX" target="blank">Shirts</a>
                                 </p>
                             </div>
                             <div className="col-lg-6">
