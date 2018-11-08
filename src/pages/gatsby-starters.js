@@ -52,7 +52,7 @@ class GatsbyStarters extends React.Component {
                 <section className="section section--shaded py-5 text-center">
                     <div className="container">
                         <p className="lead mb-0">New to Gatsby? Check out the <a href="#getStarted">Getting Started</a> guide for a quick overview.</p>
-                        {<p className="lead mb-0">Visit the <Link to="/swag/">Swag Page</Link> for some fun Dev Humor stickers.</p>}
+                        {/*<p className="lead mb-0">Visit the <Link to="/swag/">Swag Page</Link> for some fun Dev Humor stickers.</p>*/}
                         <p className="lead mb-0">Here are some great resources for <Link to="/learning-javascript-and-react/">learning JavaScript and React.js.</Link></p>
                     </div>
                 </section>
@@ -147,22 +147,7 @@ class GatsbyStarters extends React.Component {
                     </div>
                 </div>
 
-                <div className="section--shaded" style={{padding: '60px 20px'}}>
-                    <div className="container">
-                        <div className="row align-items-center">
-                            <div className="col-md-6 text-center text-md-left">
-                                <h2>Stickers and Swag</h2>
-                                <p className="mb-4">Do you like rad JavaScript stickers and swag? Check out the Swag page where I'm selling some of my developer themed designs!</p>
-                                <p className="mb-4"><Link className="btn btn-outline-primary" to="/swag/">Swag and Stickers</Link></p>
-                            </div>
-                            <div className="col-md-6 text-center">
-                                <Img fluid={this.props.data.swagDisplay.childImageSharp.fluid} />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <section id="getStarted" className="section py-5">
+                <div id="getStarted" className="section--shaded" style={{padding: '60px 20px'}}>
                     <div className="container">
                         <h2 className="text-center mb-4">Getting Started with Gatsby</h2>
                         <p>To use <a href="https://www.gatsbyjs.org/">Gatsby.js</a>, make sure you have <a href="https://nodejs.org/en/download/">Node.js</a> and npm installed on your machine. Gatsby starters can be installed via the Gatsby CLI tool or by cloning a GitHub repository. Let's explore the CLI tool by first installing it.</p>
@@ -211,6 +196,27 @@ class GatsbyStarters extends React.Component {
                         <p>If you don't want to use the Gatsby CLI tool, you can just clone the repository and manually run <code className="language-text">npm install</code> inside the folder, followed by <code className="language-text">gatsby develop</code>. Check out the official <a href="https://www.gatsbyjs.org/tutorial/">Gatsby Tutorials</a> for more information.</p>
 
                     </div>
+                </div>
+
+                <section className="section py-5">
+                    <div className="container-fluid text-center">
+                        <h2>Learn JavaScript and React</h2>
+                        <p className="mb-5">Here are some of my favorite courses for learning JavaScript and React. For more, check out the <Link to="/learning-javascript-and-react/">resources page.</Link></p>
+                        <div className="row">
+                            <div className="col-md-4">
+                                <p><a target="blank" className="u-hover-fade" href="https://click.linksynergy.com/link?id=ML*i/1MCazE&offerid=358574.851712&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-javascript-course%2F"><img class="img-fluid" src="https://udemy-images.udemy.com/course/480x270/851712_fc61_5.jpg" /></a></p>
+                                <p><a target="blank" href="https://click.linksynergy.com/link?id=ML*i/1MCazE&offerid=358574.851712&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-javascript-course%2F">The Complete JavaScript Course</a></p>
+                            </div>
+                            <div className="col-md-4">
+                                <p><a target="blank" className="u-hover-fade" href="https://click.linksynergy.com/link?id=ML*i/1MCazE&offerid=358574.1286908&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Freact-2nd-edition%2F"><img class="img-fluid" src="https://udemy-images.udemy.com/course/480x270/1286908_1773_4.jpg" /></a></p>
+                                <p><a target="blank" href="https://click.linksynergy.com/link?id=ML*i/1MCazE&offerid=358574.1286908&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Freact-2nd-edition%2F">The Complete React Web Developer Course (with Redux)</a></p>
+                            </div>
+                            <div className="col-md-4">
+                                <p><a target="blank" className="u-hover-fade" href="https://click.linksynergy.com/link?id=ML*i/1MCazE&offerid=358574.922484&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-nodejs-developer-course-2%2F"><img class="img-fluid" src="https://udemy-images.udemy.com/course/480x270/922484_52a1_5.jpg" /></a></p>
+                                <p><a target="blank" href="https://click.linksynergy.com/link?id=ML*i/1MCazE&offerid=358574.922484&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-nodejs-developer-course-2%2F">The Complete Node.js Developer Course</a></p>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <div className="container-fluid newsletter text-center" style={{padding: '40px 20px'}}>
@@ -254,13 +260,6 @@ export const pageQuery = graphql`
         }
         gatsbyPhoton:file(relativePath: { eq: "template-gatsby-photon.jpg" }) {
             ...fluidImage
-        }
-        swagDisplay:file(relativePath: { eq: "swag-display.png" }) {
-            childImageSharp {
-                fluid(maxWidth: 593) {
-                    ...GatsbyImageSharpFluid
-                }
-            }
         }
     }
 `
